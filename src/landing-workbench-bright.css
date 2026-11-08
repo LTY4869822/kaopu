@@ -1,0 +1,266 @@
+/* Landing-only light skin. Import after landing-workbench.css and page styles. */
+.sf-landing[data-theme="light"] .sf-workbench {
+  --sf-wb-bg: #fbfcfe;
+  --sf-wb-panel: #f7f9fd;
+  --sf-wb-line: #dfe5f1;
+  --sf-wb-text: #232d47;
+  --sf-wb-muted: #67728a;
+  --sf-wb-mint: #4d8360;
+  --sf-wb-blue: #3d55e8;
+  --sf-wb-blue-soft: #eef2ff;
+  color: var(--sf-wb-text);
+  background: var(--sf-wb-bg);
+  border: 1px solid #d4dceb;
+  border-radius: 22px;
+  box-shadow: 0 28px 70px #5368a616, 0 6px 14px #5368a60a, 0 1px 0 #fff inset;
+}
+
+.sf-landing[data-theme="light"] .sf-workbench :is(button,input):focus-visible {
+  outline: 2px solid var(--sf-wb-blue);
+  outline-offset: 4px;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-topbar {
+  background: #fff;
+  border-color: var(--sf-wb-line);
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-wordmark,
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-demo-label { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-wordmark > span:first-child {
+  color: #fff;
+  border: 1px solid var(--sf-wb-blue);
+  background: var(--sf-wb-blue);
+  border-radius: 7px;
+  box-shadow: 0 3px 6px #3d55e81a;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-wordmark strong { color: #232d47; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-wordmark > svg { color: #a3aec4; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-panel-heading { color: #3b4863; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-counter,
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-output-kind { color: #60708c; }
+
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-sources {
+  background: #fbfcfe;
+  border-color: var(--sf-wb-line);
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-label { color: #53617c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-label svg { color: #7385b1; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-source {
+  color: #647aa6;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 10px;
+}
+.sf-landing[data-theme="light"] .sf-workbench label.sf-wb-source {
+  transition: background .22s, border-color .22s, transform .28s cubic-bezier(.22,1.3,.36,1);
+}
+.sf-landing[data-theme="light"] .sf-workbench label.sf-wb-source:hover {
+  background: #f0f4ff;
+  border-color: #dbe4fb;
+  transform: translateY(-1px);
+}
+.sf-landing[data-theme="light"] .sf-workbench label.sf-wb-source:active { transform: scale(.985); }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-source.is-selected {
+  color: var(--sf-wb-blue);
+  background: #edf2ff;
+  border-color: #c6d2fa;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-source strong { color: #34415d; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-source.is-selected strong { color: #2e45b9; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-source small { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-source input { accent-color: var(--sf-wb-blue); }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-source-foot { color: #60708c; }
+
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-conversation {
+  background: #f0f4ff;
+  border-color: var(--sf-wb-line);
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-context { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-user-message {
+  background: #fff;
+  border-color: #dde5f6;
+  border-radius: 12px 12px 4px 12px;
+  box-shadow: 0 3px 7px #6e82b405;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-user-message > span { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-user-message p { color: #3f4c68; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-avatar {
+  color: #fff;
+  background: var(--sf-wb-blue);
+  border-color: var(--sf-wb-blue);
+  border-radius: 7px;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-assistant-message strong { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-assistant-message p { color: #445372; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-attachment-count { color: #637392; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-attachment-count svg { color: #7a8db3; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-primary {
+  color: #fff;
+  background: var(--sf-wb-blue);
+  border-color: var(--sf-wb-blue);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #3d55e822, 0 1px 0 #ffffff26 inset;
+  transition: transform .28s cubic-bezier(.22,1.3,.36,1), background .2s, box-shadow .2s;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-primary:not(:disabled):hover {
+  color: #fff;
+  background: #3047d5;
+  border-color: #3047d5;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 15px #3d55e82a, 0 1px 0 #ffffff26 inset;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-primary:not(:disabled):active {
+  transform: translateY(0) scale(.975);
+  box-shadow: 0 1px 4px #3d55e822;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-primary:disabled {
+  color: #77839c;
+  background: #dfe5f2;
+  border-color: #d9e0ee;
+  box-shadow: none;
+  opacity: 1;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-action-hint { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-selected-note {
+  background: #fff;
+  border-color: #d7e1f6;
+  border-radius: 12px;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-selected-note > svg:first-child { color: var(--sf-wb-blue); }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-selected-note strong { color: #344363; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-selected-note small { color: #60708c; }
+
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-output { background: #f7f9fd; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-output-body { scrollbar-color: #9dadcc66 transparent; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-empty-files { color: #8398c5; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-empty-files svg:first-child,
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-empty-files svg:last-child { opacity: .7; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-empty h3 { color: #283653; font-weight: 500; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-empty p { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-result-label { color: #597069; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-group {
+  background: #fff;
+  border-color: #dce4f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px #4f6b9a05;
+  animation: sf-wb-bright-card-in .4s cubic-bezier(.22,1.1,.36,1) both;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-group:nth-of-type(2) { animation-delay: .06s; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-group > div { color: #3a4d78; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-group > div > svg { color: #526fe0; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-group h3 { color: #2d3c5a; font-weight: 550; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-group > div > span { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-course-group p { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-output-note { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-placeholder {
+  background: #fff;
+  border-color: #dbe3f3;
+  border-radius: 9px;
+  box-shadow: 0 5px 15px #576d9d07;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-placeholder-label { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-placeholder-label > svg { color: #6d88d4; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-placeholder h3 { color: #344365; font-weight: 500; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-placeholder-lines i { background: #e7edf9; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-placeholder > p { color: #60708c; }
+
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-paper {
+  background: #fff;
+  color: #2a3752;
+  border: 1px solid #e0e6f0;
+  border-radius: 4px;
+  box-shadow: 0 5px 12px #5e749811, 0 1px 2px #5e74980a;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-paper-meta { color: #60708c; border-color: #e4e9f1; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-paper-course { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-paper h3 { color: #253451; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-paper-lead { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-paper h4 { color: #354361; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-paper h4 > span { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-paper h4 > sup { color: #5871cc; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-paper section > p { color: #5c6b83; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-paper section > p strong { color: #2f456c; font-weight: 600; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-note-equation {
+  color: #3a53c1;
+  background: #f2f5ff;
+  border-radius: 8px;
+  margin-block: 10px;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-paper-reminder { border-color: #a1b6ed; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-paper-reminder > span { color: #53688c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-paper-reminder > p { color: #63748f; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-paper-footer { color: #60708c; border-color: #e4e9f1; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-citation-button { color: #536dc4; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-citation-button > span { color: #536dc4; background: #edf2ff; border-color: #d2ddfa; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-citation-button:hover { color: #2f4ccb; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-citations > div { border-color: #dbe3f2; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-citations strong { color: #40557f; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-citations strong > span { color: #536dc4; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-citations small { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-citations p { color: #5c6f90; }
+
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-question-meta { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-practice > h3 { color: #263653; font-weight: 500; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-options label {
+  color: #526380;
+  background: #fff;
+  border-color: #dce4f3;
+  border-radius: 11px;
+  transition: background .2s, border-color .2s, box-shadow .2s, transform .28s cubic-bezier(.22,1.3,.36,1);
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-options label:hover {
+  background: #f3f6ff;
+  border-color: #b8c8f5;
+  transform: translateX(2px);
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-options label:active { transform: scale(.975); }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-options label.is-chosen {
+  color: #3148b9;
+  background: #edf2ff;
+  border-color: #899fef;
+  box-shadow: 0 0 0 1px #899fef26 inset;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-options label:has(input:focus-visible) { outline-color: var(--sf-wb-blue); }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-option-letter { color: #60708c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-options label.is-chosen .sf-wb-option-letter,
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-options label > svg { color: var(--sf-wb-blue); }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-feedback {
+  background: #f8f2e6;
+  border-color: #e9ddc4;
+  border-radius: 12px;
+  animation: sf-wb-bright-card-in .35s cubic-bezier(.22,1.1,.36,1) both;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-feedback > strong { color: #75643f; font-weight: 550; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-feedback > p { color: #746a57; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-feedback > span { color: #827250; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-feedback[data-correct="true"] { background: #eff6f0; border-color: #d1e3d4; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-feedback[data-correct="true"] > strong { color: #3d6c4c; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-feedback[data-correct="true"] > p { color: #536e5d; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-answer-feedback[data-correct="true"] > span { color: #4e6d58; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-retry { color: #5d6e95; }
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-retry:hover { color: #3d55e8; }
+
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-footer {
+  background: #f3f6fb;
+  color: #60708c;
+  border-color: #dfe6f2;
+}
+.sf-landing[data-theme="light"] .sf-workbench .sf-wb-footer > span:first-child { color: #566d96; }
+
+@keyframes sf-wb-bright-card-in {
+  from { opacity: .35; transform: translateY(8px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 740px) {
+  .sf-landing[data-theme="light"] .sf-workbench { border-radius: 18px; box-shadow: 0 16px 35px #5368a60e, 0 3px 7px #5368a607; }
+  .sf-landing[data-theme="light"] .sf-workbench .sf-wb-source { background: #fff; border-color: #e1e8f5; }
+  .sf-landing[data-theme="light"] .sf-workbench .sf-wb-source.is-selected { background: #edf2ff; border-color: #c6d2fa; }
+}
+.sf-landing.sf-quiet[data-theme="light"] .sf-workbench *,
+.sf-landing.sf-quiet[data-theme="light"] .sf-workbench *::before,
+.sf-landing.sf-quiet[data-theme="light"] .sf-workbench *::after { animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) {
+  .sf-landing[data-theme="light"] .sf-workbench *,
+  .sf-landing[data-theme="light"] .sf-workbench *::before,
+  .sf-landing[data-theme="light"] .sf-workbench *::after { animation: none !important; transition: none !important; }
+}

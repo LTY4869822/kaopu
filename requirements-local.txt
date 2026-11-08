@@ -1,0 +1,9 @@
+# Optional local speech transcription. Not needed for subtitle/text imports.
+# These direct versions were used for the real-course check on 2026-11-04.
+yt-dlp==2026.8.19
+faster-whisper==1.2.1
+av==17.1.0
+imageio-ffmpeg==0.6.0
+huggingface-hub==1.18.0
+Pillow==12.2.0
+numpy==2.4.6

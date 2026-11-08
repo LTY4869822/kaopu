@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-06",
+  "node": "24.15.0",
+  "automated": {
+    "unitAndApi": {
+      "passed": 377,
+      "failed": 0,
+      "log": "npm test"
+    },
+    "chunkRecovery": {
+      "passed": 3,
+      "failed": 0
+    },
+    "documentReader": {
+      "passed": 7,
+      "failed": 0,
+      "actualCanvasPaint": true,
+      "textLayer": true,
+      "pagingAndZoom": true
+    },
+    "designScan": []
+  },
+  "manual": {
+    "data": "isolated synthetic courses and files",
+    "model": "existing configured text service, actual requests",
+    "flows": [
+      "PDF/DOCX/PPTX/TXT import and damaged-file recovery",
+      "course URL and browser history",
+      "grounded notes with missing-source repair",
+      "three-question whole-set AI review and draft reload",
+      "planner timeline/day and task completion",
+      "timed exam objective report and wrong-cause tracking",
+      "past-paper template confirmation and 3-question generation",
+      "timestamped lecture notes, contextual chat and source jump",
+      "settings connection test, preferences and data export",
+      "FSRS recall and next due",
+      "390px core pages and 320px narrow layouts",
+      "visible PDF text/formulas and DOCX download"
+    ]
+  },
+  "limits": [
+    "No new long real-video ASR run in this audit",
+    "No multiuser/cloud deployment validation",
+    "AI correctness not guaranteed by contract tests"
+  ],
+  "cleanRoom": {
+    "status": "passed",
+    "validatedSourceDigest": "ed41d2152fed9bee80a52dea3b2d864e8ee4d647c796199574c78d5dbc119048",
+    "npmCi": "passed, 256 packages installed",
+    "productionBuild": "passed",
+    "unitAndApi": {
+      "passed": 377,
+      "failed": 0
+    },
+    "productionStartup": {
+      "passed": true,
+      "entrypoint": "npm start / node server/index.mjs",
+      "authenticated": false,
+      "accountExists": false,
+      "protectedStateStatus": 401,
+      "frontendServed": true,
+      "pdfWorkerServed": true,
+      "sourceDigest": "ed41d2152fed9bee80a52dea3b2d864e8ee4d647c796199574c78d5dbc119048"
+    },
+    "dependencyWarnings": [
+      "pagedjs -> @babel/polyfill 7.12.1 deprecated",
+      "pagedjs -> core-js 2.6.12 deprecated"
+    ]
+  }
+}

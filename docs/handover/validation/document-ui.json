@@ -1,0 +1,28 @@
+{
+  "checks": [
+    "course workspace uses the shared warm canvas and paper surface without a dark shell override",
+    "focused two-pane workspace; on-demand shelf preserves chat width; keyboard trap, Escape and focus restoration",
+    "real PDF preview and download; real DOCX download; Escape closes reader and restores focus",
+    "PDF failure is actionable; retry works; revision returns to the existing composer",
+    "1100px, 390px and 320px workspace and document reader fit; mobile download controls remain reachable",
+    "normal-motion repeated drawer reversal settles correctly; reduced-motion flow also passed",
+    "empty workspace offers practical tasks; dragging a source attaches it; note task prepares a usable instruction"
+  ],
+  "layouts": [
+    {
+      "width": 1100,
+      "scrollWidth": 1100
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  ],
+  "pageErrors": [],
+  "externalRequests": [],
+  "passed": true
+}

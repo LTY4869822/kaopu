@@ -1,0 +1,81 @@
+.app-shell .page-settings { max-width: 1080px; margin-inline: auto; }
+.app-shell .page-settings > .page-heading { margin-bottom: 26px; }
+.app-settings { --st-muted: #6b7063; --st-rule: #e0e3d7; max-width: 860px; padding-bottom: 28px; }
+.app-settings [hidden] { display: none !important; }
+.st-tabs { display: flex; gap: 28px; border-bottom: 1px solid var(--st-rule); margin-bottom: 28px; }
+.st-tabs > button { display: flex; gap: 9px; align-items: center; min-height: 50px; padding: 10px 0 14px; border: 0; border-bottom: 2px solid transparent; border-radius: 0; color: var(--st-muted); font-size: 16px; background: transparent; white-space: nowrap; }
+.st-tabs > button[aria-selected="true"] { border-bottom-color: #c14e28; color: #262d20; font-weight: 550; }
+.st-tabs > button[aria-selected="true"] > svg { color: #b64a26; }
+.st-tabs > button:hover { color: #b14b28; }
+.st-panel { padding: 28px 32px; background: #fffefa; border: 1px solid var(--st-rule); border-radius: 14px; }
+.st-section-heading { margin-bottom: 26px; }
+.st-section-heading h2 { font-size: 22px; line-height: 1.5; font-weight: 550; margin: 0 0 10px; }
+.st-section-heading p { font-size: 15px; line-height: 1.85; color: var(--st-muted); margin: 0; max-width: 55ch; }
+.app-settings :is(input,select,button) { font-family: inherit; }
+.app-settings :is(button,a,input,select,summary):focus-visible { outline: 2px solid #bb4b25; outline-offset: 4px; }
+.app-settings :is(button,a.secondary) { min-height: 44px; }
+.app-settings .primary { background: #bd4d27; color: #fff; padding: 11px 20px; border: 1px solid #bd4d27; font-size: 15px; border-radius: 8px; }
+.app-settings .primary:hover:not(:disabled) { background: #a5401d; border-color: #a5401d; }
+.app-settings .primary:disabled { background: #e5e7dc; border-color: #e5e7dc; color: #747969; }
+.app-settings .secondary { background: transparent; color: #505a43; border: 1px solid #d8ddce; padding: 10px 16px; border-radius: 8px; font-size: 14px; display: inline-flex; gap: 8px; align-items: center; justify-content: center; text-decoration: none; white-space: nowrap; }
+.app-settings .text-button { font-size: 14px; color: #616b54; }
+.st-hint { margin: 22px 0 0; color: var(--st-muted); font-size: 13px; line-height: 1.9; max-width: 65ch; }
+.app-settings .model-settings-embedded { max-width: 610px; }
+.app-settings .model-service-tabs { margin-top: 0; background: #efefe7; }
+.app-settings .model-service-tabs button { background: transparent; border: 0; }
+.app-settings .model-service-tabs button[aria-pressed="true"] { background: #fffefa; color: #aa4422; }
+.app-settings .model-settings-form { margin-top: 22px; gap: 20px; }
+.app-settings .model-settings-form input:not([type="checkbox"]) { background: #fffefa; font-family: inherit; }
+.app-settings .model-settings-actions { position: static; background: transparent; box-shadow: none; padding-top: 20px; margin-top: 4px; }
+.app-settings .model-service-status > button { min-height: 44px; }
+.app-settings .model-reuse { min-height: 44px; }
+.app-settings .model-key-help { font-size: 13px; }
+.st-form { display: grid; gap: 26px; max-width: 610px; }
+.st-form > label { display: grid; gap: 9px; font-size: 15px; color: #454e3c; }
+.app-settings .st-form input:not([type="radio"]), .app-settings .st-form select { width: 100%; min-height: 46px; border: 1px solid #d7ddcc; border-radius: 8px; padding: 11px 13px; font-size: 16px; color: #2d3524; background: #fffefa; }
+.st-form small { font-size: 13px; line-height: 1.8; color: var(--st-muted); }
+.st-input-unit { max-width: 240px; display: flex; align-items: center; gap: 12px; }
+.st-input-unit > span { white-space: nowrap; color: var(--st-muted); font-size: 14px; }
+.st-goals { margin: 0; padding: 0; border: 0; min-width: 0; }
+.st-goals legend { font-size: 15px; margin-bottom: 12px; }
+.st-goals label { display: flex; gap: 12px; align-items: center; min-height: 76px; border: 1px solid #dfe3d5; border-radius: 10px; padding: 14px 17px; cursor: pointer; }
+.st-goals label + label { margin-top: 10px; }
+.st-goals .is-selected { background: #fff3e9; border-color: #d39a7a; }
+.st-goals input { margin: 0; width: 17px; height: 17px; accent-color: #bd4d27; flex: 0 0 17px; }
+.st-goals strong { display: block; font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+.st-goals small { display: block; }
+.st-actions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; border-top: 1px solid var(--st-rule); padding-top: 22px; }
+.st-error { display: flex; gap: 10px; align-items: start; padding: 14px; border-radius: 9px; color: #9c4021; background: #fff1e7; font-size: 14px; line-height: 1.8; }
+.st-error svg { flex-shrink: 0; margin-top: 4px; }
+.st-account-row { display: flex; gap: 16px; align-items: center; padding: 0 0 26px; border-bottom: 1px solid var(--st-rule); }
+.st-account-row > svg { color: #8b967c; flex-shrink: 0; }
+.st-account-row > div { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.st-account-row strong { display: block; font-size: 17px; font-weight: 550; }
+.st-account-row span { display: block; color: var(--st-muted); font-size: 13px; margin-top: 5px; }
+.st-data-row { display: flex; gap: 22px; align-items: center; justify-content: space-between; padding-top: 26px; }
+.st-data-row h3 { display: flex; align-items: center; gap: 9px; margin: 0 0 8px; font-size: 16px; font-weight: 550; }
+.st-data-row p { margin: 0; line-height: 1.8; font-size: 14px; color: var(--st-muted); }
+.st-advanced { border-top: 1px solid var(--st-rule); margin-top: 28px; padding-top: 18px; }
+.st-advanced summary { cursor: pointer; font-size: 14px; color: #676e5d; min-height: 44px; padding-block: 12px; }
+.st-advanced p { font-size: 14px; line-height: 1.8; color: var(--st-muted); margin: 8px 0 15px; }
+.st-danger { background: transparent; border: 1px solid #dec9bc; border-radius: 8px; color: #a84427; padding: 8px 14px; font-size: 14px; }
+@media(max-width:760px) { .st-tabs { gap: 22px; } .st-panel { padding: 24px; } .st-section-heading h2 { font-size: 21px; } }
+@media(max-width:480px) {
+  .app-shell .page-settings > .page-heading { margin-bottom: 20px; }
+  .st-tabs { gap: 0; justify-content: space-between; margin-bottom: 20px; }
+  .st-tabs > button { gap: 6px; font-size: 14px; }
+  .st-tabs > button > svg { width: 17px; }
+  .st-panel { padding: 24px 18px; }
+  .st-section-heading { margin-bottom: 22px; }
+  .st-section-heading h2 { font-size: 20px; }
+  .st-section-heading p { font-size: 14px; }
+  .app-settings .model-service-tabs button { font-size: 14px; }
+  .app-settings .model-key-help { position: static; }
+  .app-settings .model-settings-form input:not([type="checkbox"]) { font-size: 15px; }
+  .st-form { gap: 24px; }
+  .st-data-row { align-items: start; flex-direction: column; gap: 18px; }
+  .st-account-row { flex-wrap: wrap; gap: 12px; }
+  .st-account-row .secondary { margin-left: 44px; }
+  .st-actions { align-items: stretch; flex-direction: column; gap: 8px; }
+  .st-actions > button { justify-content: center; }
+}

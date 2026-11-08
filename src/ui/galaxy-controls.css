@@ -1,0 +1,150 @@
+/*
+ * Uiverse/galaxy, MIT — adapted for Shifen, not a gallery theme.
+ * cssbuttons-io/massive-mayfly-74: persistent label + moving arrow.
+ * Admin12121/cold-bobcat-20: sliding selected segment.
+ * IndexOC/moody-mouse-53, PriyanshuGupta28/silent-rabbit-98: custom checked state.
+ * AbanoubMagdy1/hungry-elephant-87: border spinner.
+ * See public/licenses/galaxy-MIT.txt and docs/galaxy-components-upgrade.md.
+ */
+.app-shell.sf-ui, .sf-control-surface {
+  --ui-action: #be4d28;
+  --ui-action-hover: #a83e1f;
+  --ui-action-down: #94371c;
+  --ui-paper: #fffefa;
+  --ui-field: #fffefa;
+  --ui-rule: #dcded4;
+  --ui-ink: #282d24;
+  --ui-muted: #676e5e;
+  --ui-track: #eaece3;
+  --ui-soft: #fbefe5;
+  --ui-ease: cubic-bezier(.22,1,.36,1);
+  --sf-accent: var(--ui-action);
+  --batch-accent: var(--ui-action);
+  --catalog-accent: var(--ui-action);
+}
+.sf-control-surface { font-family: "Noto Sans SC Variable", "PingFang SC", "Microsoft YaHei", sans-serif; color: var(--ui-ink); background: var(--ui-paper); }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(button,a).primary,
+.app-shell.sf-ui button.batch-primary {
+  min-height: 46px; padding: 11px 18px; border: 1px solid transparent; border-radius: 9px;
+  background: var(--ui-action); color: #fff; font-size: 15px; font-weight: 550; line-height: 1.5;
+  box-shadow: none; text-shadow: none; gap: 10px; cursor: pointer; touch-action: manipulation;
+  transition: background-color 160ms ease-out, transform 100ms ease-out;
+}
+:is(.app-shell.sf-ui,.sf-control-surface) :is(button,a).primary:hover:not(:disabled),
+.app-shell.sf-ui button.batch-primary:hover:not(:disabled) { background: var(--ui-action-hover); border-color: transparent; transform: none; box-shadow: none; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(button,a).primary:active:not(:disabled),
+.app-shell.sf-ui button.batch-primary:active:not(:disabled) { background: var(--ui-action-down); transform: translateY(1px); }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(button,a).secondary,
+.app-shell.sf-ui button.batch-secondary {
+  min-height: 46px; padding: 10px 17px; border: 1px solid var(--ui-rule); border-radius: 9px;
+  color: #48513d; background: var(--ui-paper); font-size: 15px; font-weight: 500; line-height: 1.5;
+  gap: 8px; cursor: pointer; box-shadow: none; touch-action: manipulation;
+  transition: background-color 160ms ease-out, border-color 160ms ease-out, transform 100ms ease-out;
+}
+:is(.app-shell.sf-ui,.sf-control-surface) :is(button,a).secondary:hover:not(:disabled),
+.app-shell.sf-ui button.batch-secondary:hover:not(:disabled) { background: #f4f4ed; border-color: #b5bca9; box-shadow: none; transform: none; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(button,a).secondary:active:not(:disabled),
+.app-shell.sf-ui button.batch-secondary:active:not(:disabled) { transform: translateY(1px); background: #edeee6; }
+:is(.app-shell.sf-ui,.sf-control-surface) button:is(.primary,.secondary,.batch-primary,.batch-secondary):disabled { background: #e9ebe3; border-color: #e9ebe3; color: #73796b; cursor: not-allowed; opacity: 1; box-shadow: none; transform: none; }
+:is(.app-shell.sf-ui,.sf-control-surface) .sf-action { display: inline-flex; align-items: center; justify-content: center; gap: 16px; }
+.sf-button-label { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 0; }
+.sf-button-trailing { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 18px; transition: transform 180ms var(--ui-ease,ease-out); }
+@media(hover:hover) {
+  .sf-action:hover:not(:disabled) .sf-button-trailing { transform: translateX(3px); }
+  .sf-action[aria-busy="true"] .sf-button-trailing { transform: none; }
+}
+.app-shell.sf-ui :is(.primary,.text-button):hover > svg:last-child { transform: none; }
+:is(.app-shell.sf-ui,.sf-control-surface) button.icon-button { min-width: 44px; min-height: 44px; border-radius: 9px; box-shadow: none; }
+:is(.app-shell.sf-ui,.sf-control-surface) .icon-button:hover:not(:disabled) { color: #343d2b; background: #eceee5; transform: none; }
+.app-shell.sf-ui :is(.sidebar .nav-item:hover > svg,.resource-card:hover,.batch-drop:hover) { transform: none; }
+.app-shell.sf-ui .sf-command-shortcut { background: var(--ui-paper); box-shadow: none; border-color: var(--ui-rule); min-height: 44px; }
+.app-shell.sf-ui .sf-command-shortcut:hover { transform: none; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(button,a,input,textarea,select,summary):focus-visible { outline: 2px solid var(--ui-action); outline-offset: 3px; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(input,textarea,select) { caret-color: var(--ui-action); font-family: inherit; accent-color: var(--ui-action); }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(input,textarea)::placeholder { color: #727969; opacity: 1; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(input,textarea,select):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]) { transition: border-color 160ms ease-out, background-color 160ms ease-out; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.form,.model-settings-form,.st-form) :is(input,textarea,select):not([type="checkbox"]):not([type="radio"]) { min-height: 46px; border: 1px solid var(--ui-rule); border-radius: 9px; background: var(--ui-field); font-size: 16px; line-height: 1.6; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.form,.model-settings-form,.st-form) :is(input,textarea,select):hover:not(:disabled) { border-color: #b9c0ad; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.form,.model-settings-form,.st-form) :is(input,textarea,select):focus { border-color: var(--ui-action); }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.form,.model-settings-form,.st-form) :is(input,textarea,select):disabled { color: #6e7663; background: #f1f2eb; cursor: not-allowed; }
+/* Keep native inputs, tab order, labels and arrow-key behavior. No display:none replacements. */
+:is(.app-shell.sf-ui,.sf-control-surface) input[type="checkbox"] { appearance: none; -webkit-appearance: none; width: 18px; height: 18px; min-width: 18px; min-height: 18px; flex: 0 0 18px; padding: 0; margin: 0; border: 1px solid #aeb6a0; border-radius: 5px; background: var(--ui-paper); box-shadow: none; cursor: pointer; vertical-align: middle; transition: background-color 140ms, border-color 140ms; }
+:is(.app-shell.sf-ui,.sf-control-surface) input[type="checkbox"]:checked { border-color: var(--ui-action); background-color: var(--ui-action); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='m4 9 3.2 3.2L14 5.5' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+:is(.app-shell.sf-ui,.sf-control-surface) input[type="checkbox"]:indeterminate { border-color: var(--ui-action); background-color: var(--ui-action); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M4 9h10' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E"); }
+:is(.app-shell.sf-ui,.sf-control-surface) input[type="checkbox"]:disabled { opacity: 1; cursor: not-allowed; border-color: #c7ccbd; background-color: #eceee5; }
+:is(.app-shell.sf-ui,.sf-control-surface) input[type="checkbox"]:checked:disabled { background-color: #87927b; border-color: #87927b; }
+:is(.app-shell.sf-ui,.sf-control-surface) input[type="radio"] { accent-color: var(--ui-action); cursor: pointer; }
+:is(.app-shell.sf-ui,.sf-control-surface) ::selection { background: #f4d9c7; color: #30281f; }
+/* One shared sliding selection. Local names retain their existing React handlers. */
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs) { --ui-active: 0; --ui-count: 2; position: relative; isolation: isolate; display: flex; padding: 4px; gap: 0; border: 0; border-radius: 10px; background: var(--ui-track); }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs):has(> button:nth-child(2)[aria-pressed="true"]) { --ui-active: 1; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs)::before { content: ""; pointer-events: none; position: absolute; z-index: -1; left: 4px; top: 4px; bottom: 4px; width: calc((100% - 8px) / var(--ui-count)); background: var(--ui-paper); border-radius: 7px; transform: translateX(calc(var(--ui-active) * 100%)); transition: transform 230ms var(--ui-ease); box-shadow: 0 1px 3px #30372210; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs) > button { flex: 1; position: relative; min-height: 44px; border: 0; border-radius: 7px; background: transparent; color: #626b56; box-shadow: none; font-size: 14px; padding: 8px 16px; transition: color 160ms ease-out; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs) > button[aria-pressed="true"] { background: transparent; color: #2d3524; box-shadow: none; font-weight: 550; }
+:is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs) > button:hover:not(:disabled) { color: #a74322; }
+.app-shell.sf-ui .sp-view-toggle { background: var(--ui-track); border: 0; box-shadow: none; border-radius: 10px; }
+.app-shell.sf-ui .sp-view-toggle button { min-height: 44px; }
+.app-shell.sf-ui .sp-view-indicator { box-shadow: 0 1px 3px #30372210; }
+/* Readable surfaces: remove old decorative elevation and pointer tilting. */
+.app-shell.sf-ui .batch-upload-panel { border-radius: 16px; border-color: var(--ui-rule); box-shadow: none; }
+.app-shell.sf-ui .batch-import .batch-drop { background-image: none; background-color: #f8f8f2; border-color: #d2d7c7; border-radius: 12px; box-shadow: none; transform: none; transition: background-color 160ms,border-color 160ms; }
+.app-shell.sf-ui .batch-import .batch-drop:hover { background-color: #f5f5ee; border-color: #bbc4ac; transform: none; box-shadow: none; }
+.app-shell.sf-ui .batch-import .batch-drop.is-dragging { background: #fff2e8; border-color: var(--ui-action); }
+.app-shell.sf-ui .batch-drop::before,.app-shell.sf-ui .batch-drop::after { display: none; }
+.app-shell.sf-ui .course-tile { border: 0; border-radius: 0; background: transparent; box-shadow: none; transform: none; }
+.app-shell.sf-ui .course-tile:hover,.app-shell.sf-ui .course-tile:focus-within { transform: none; box-shadow: none; }
+.app-shell.sf-ui .course-tile-main { padding: 0; border-radius: 12px; }
+.app-shell.sf-ui .course-tile-cover { border-radius: 12px; background: #eeeee6; perspective: none; }
+.app-shell.sf-ui .course-tile-cover::before,.app-shell.sf-ui :is(.course-book-pages,.course-book-spine,.course-book-sheen) { display: none; }
+.app-shell.sf-ui .course-tile .course-tile-book { inset: 0; filter: none; transform: none; transition: none; }
+.app-shell.sf-ui .course-tile-book img { border-radius: 12px; box-shadow: none; }
+.app-shell.sf-ui .course-tile:hover .course-tile-title { color: #a74424; }
+.app-shell.sf-ui .course-tile-body { padding: 16px 2px 8px; }
+.app-shell.sf-ui .course-tile-kind { display: contents; }
+.app-shell.sf-ui .course-tile-kind > span:first-child { display: none; }
+.app-shell.sf-ui .course-tile-demo { position: absolute; top: 12px; left: 12px; padding: 3px 7px; background: #fffefa; color: #5c6750; border: 1px solid #e1e5d9; border-radius: 5px; font-size: 12px; }
+.app-shell.sf-ui .course-tile-main:focus-visible { outline-offset: 6px; }
+.sf-drop-symbol { display: grid; place-items: center; width: 76px; height: 76px; margin-bottom: 22px; border-radius: 16px; color: #68765a; background: #e9ede1; }
+.app-shell.sf-ui .batch-import .batch-drop { min-height: 350px; }
+.app-shell.sf-ui .batch-drop.is-dragging .sf-drop-symbol { color: #a64925; background: #f6e2d1; }
+.app-shell.sf-ui .home-eyebrow { display: none; }
+.app-shell.sf-ui .resource-card { border-radius: 12px; box-shadow: none; }
+.app-shell.sf-ui .resource-card:hover { border-color: #b4bea6; box-shadow: none; transform: none; }
+.app-shell.sf-ui .flashcard { border: 1px solid var(--ui-rule); border-radius: 14px; box-shadow: none; }
+.app-shell.sf-ui .flashcard:hover { transform: none; box-shadow: none; }
+.app-shell.sf-ui .page-kicker { display: none; }
+.app-shell.sf-ui :is(.ask-panel,.es-panel,.pb-question-area,.st-panel) { border-color: var(--ui-rule); box-shadow: none; }
+.app-shell.sf-ui :is(.pb-options label,.st-goals label):has(input:checked) { background: var(--ui-soft); border-color: #c68d6c; }
+.app-shell.sf-ui :is(.pb-options label,.st-goals label):hover { background: #f7f7f0; }
+.app-shell.sf-ui :is(.pb-options label,.st-goals label):has(input:checked):hover { background: #fbebde; }
+.app-shell.sf-ui :is(.pb-review-item,.ps-settings,.es-topic-focus,.st-advanced) > summary { transition: color 140ms ease-out; }
+.app-shell.sf-ui :is(.pb-review-item,.ps-settings,.es-topic-focus,.st-advanced) > summary:hover { color: #a74424; }
+.app-shell.sf-ui progress { accent-color: var(--ui-action); border: 0; }
+.app-shell.sf-ui progress::-webkit-progress-bar { background: var(--ui-track); }
+.app-shell.sf-ui progress::-webkit-progress-value { background: var(--ui-action); }
+.app-shell.sf-ui progress::-moz-progress-bar { background: var(--ui-action); }
+.app-shell.sf-ui .toast { background: #fffefa; color: #35402b; border: 1px solid #dce2d2; border-radius: 11px; padding: 15px 20px; box-shadow: 0 8px 24px #26341b14; font-size: 15px; }
+.app-shell.sf-ui .toast > svg { color: #68834e; }
+.sf-control-surface .model-settings-actions { background: var(--ui-paper); box-shadow: none; }
+.sf-control-surface.modal { border-radius: 14px; background: var(--ui-paper); box-shadow: 0 20px 60px #222a1b28; }
+/* Adapted from AbanoubMagdy1. Only runs while work is actually pending. */
+.sf-loading-mark { display: inline-block; box-sizing: border-box; flex-shrink: 0; border: 2px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: sf-control-spin .85s linear infinite; }
+.sf-loading-state { display: flex; gap: 14px; align-items: center; justify-content: center; padding: 52px 24px; color: #727b64; }
+.sf-loading-state strong { display: block; font-size: 16px; font-weight: 500; color: #454f38; }
+.sf-loading-state p { font-size: 14px; color: #6b745f; margin: 6px 0 0; line-height: 1.8; }
+@keyframes sf-control-spin { to { transform: rotate(360deg); } }
+@media(max-width:480px) {
+  :is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs) > button { padding-inline: 10px; }
+  .sf-loading-state { padding: 40px 16px; }
+  .app-shell.sf-ui .batch-import .batch-drop { min-height: 310px; padding-inline: 18px; }
+  .sf-drop-symbol { width: 64px; height: 64px; margin-bottom: 18px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  :is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs)::before,.sf-loading-mark { animation: none; transition: none; }
+  :is(.app-shell.sf-ui,.sf-control-surface) :is(button,a,input,textarea,select,.sf-button-trailing) { transition: none; }
+  .sf-action:hover:not(:disabled) .sf-button-trailing { transform: none; }
+}
+@media(forced-colors:active) {
+  :is(.app-shell.sf-ui,.sf-control-surface) input[type="checkbox"] { appearance: auto; -webkit-appearance: auto; background-image: none; }
+  :is(.app-shell.sf-ui,.sf-control-surface) :is(.pb-modes,.model-service-tabs)::before { background: Canvas; border: 1px solid Highlight; }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+<title>线性代数：空间与变换</title>
+<rect width="640" height="360" fill="#B9D3F4"/>
+<text x="32" y="44" fill="#171717" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">LINEAR ALGEBRA</text>
+<path d="M32 65H608" stroke="#171717" stroke-opacity=".25"/>
+<text x="44" y="278" fill="#171717" font-family="Georgia,serif" font-size="224" font-style="italic">A</text>
+<g transform="translate(292 95)"><path d="m42 80 110-62 131 64-111 66Z" fill="#F6F1E6"/><path d="m42 80 130 68v135L42 213Z" fill="#FA5B35"/><path d="m172 148 111-66v134l-111 67Z" fill="#8FB7EA"/><g stroke="#171717" stroke-width="2"><path d="m42 80 110-62 131 64-111 66Z"/><path d="M42 80v133l130 70 111-67V82M172 148v135"/><path d="M152 18v132l131 66M42 213l110-63 20-2" stroke-dasharray="5 7"/></g><circle cx="172" cy="148" r="7" fill="#171717"/></g>
+<text x="34" y="333" fill="#171717" font-family="monospace" font-size="13" letter-spacing="2">SPACE · STRUCTURE · TRANSFORM</text>
+</svg>

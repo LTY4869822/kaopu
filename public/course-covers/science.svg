@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+<title>科学：探索与发现</title>
+<rect width="640" height="360" fill="#D9DCE0"/>
+<text x="32" y="44" fill="#171717" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">SCIENCE</text>
+<path d="M32 65H608" stroke="#171717" stroke-opacity=".25"/>
+<g stroke="#191919" stroke-width="3"><ellipse cx="320" cy="202" rx="211" ry="58"/><ellipse cx="320" cy="202" rx="211" ry="58" transform="rotate(30 320 202)"/><ellipse cx="320" cy="202" rx="211" ry="58" transform="rotate(-30 320 202)"/></g>
+<circle cx="320" cy="202" r="49" fill="#FA5B35"/>
+<circle cx="320" cy="202" r="23" fill="#191919"/>
+<circle cx="501" cy="108" r="12" fill="#FA5B35"/>
+<circle cx="129" cy="204" r="12" fill="#191919" stroke="#D9DCE0" stroke-width="4"/>
+<circle cx="460" cy="300" r="12" fill="#191919" stroke="#D9DCE0" stroke-width="4"/>
+<text x="34" y="333" fill="#171717" font-family="monospace" font-size="13" letter-spacing="2">EXPLORE THE UNKNOWN</text>
+</svg>

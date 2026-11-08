@@ -1,0 +1,69 @@
+.lesson-chat { --chat-ink: #33352e; --chat-muted: #6e7165; display: flex; flex-direction: column; align-self: start; width: 100%; min-width: 0; height: min(820px, calc(100dvh - 130px)); min-height: 530px; position: sticky; top: 92px; background: #fcfbf7; color: var(--chat-ink); border-left: 1px solid #e5e3d9; font-size: 15px; }
+.lesson-chat :is(h3,h4,p) { margin: 0; }
+.lesson-chat button { min-height: 44px; min-width: 44px; }
+.lesson-chat :is(button,textarea,select):focus-visible { outline: 3px solid #d88755; outline-offset: 3px; }
+.lesson-chat ::selection { background: #f8d8c0; color: #3a3026; }
+.lesson-chat-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 13px 14px 12px 20px; border-bottom: 1px solid #e5e3d9; }
+.lesson-chat-heading > div { display: flex; align-items: center; gap: 9px; }
+.lesson-chat-heading h3 { font-size: 17px; font-weight: 600; }
+.lesson-chat-heading > div:first-child > svg { color: #b65830; }
+.lesson-chat-heading button { display: grid; place-items: center; border-radius: 7px; color: #6c6c60; }
+.lesson-chat-heading button:hover { background: #eeede5; color: #a64f2e; }
+.lesson-chat-context { padding: 16px 20px 12px; background: #f5f3eb; border-bottom: 1px solid #e5e3d9; }
+.lesson-chat-context label { display: block; color: #6b6f60; font-size: 14px; margin-bottom: 7px; }
+.lesson-chat-context select { display: block; width: 100%; min-width: 0; min-height: 44px; font-size: 15px; border: 1px solid #deddd3; border-radius: 8px; background: #fffefa; color: #414638; padding: 9px 28px 9px 10px; text-overflow: ellipsis; }
+.lesson-chat-context > p { display: flex; gap: 7px; align-items: flex-start; color: #737563; font-size: 14px; line-height: 1.65; margin-top: 9px; }
+.lesson-chat-context p svg { margin-top: 4px; flex-shrink: 0; }
+.lesson-chat-context p span { overflow-wrap: anywhere; }
+.lesson-chat-context > button { display: inline-flex; align-items: center; gap: 6px; color: #9a512e; font-size: 14px; padding: 6px 0; }
+.lesson-chat-messages { padding: 22px 20px; flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #d6d0bf transparent; }
+.lesson-chat-empty > span { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: #f7e9da; color: #9b5b30; margin-bottom: 17px; }
+.lesson-chat-empty h4 { font-size: 18px; font-weight: 550; line-height: 1.6; }
+.lesson-chat-empty > p { color: var(--chat-muted); font-size: 14px; line-height: 1.9; margin-top: 11px; }
+.lesson-chat-empty > div { display: grid; gap: 10px; margin-top: 24px; }
+.lesson-chat-empty button { display: flex; align-items: center; justify-content: space-between; gap: 10px; text-align: left; font-size: 14px; line-height: 1.65; padding: 10px 12px; border: 1px solid #e1ddd0; border-radius: 8px; background: #fffef9; color: #68634e; }
+.lesson-chat-empty button > svg { flex-shrink: 0; }
+.lesson-chat-empty button:hover:not(:disabled) { background: #fff2e7; border-color: #e6bca0; }
+.lesson-chat button:disabled { cursor: not-allowed; opacity: .5; }
+.lesson-chat-message { margin-bottom: 27px; min-width: 0; }
+.lesson-chat-message-label { display: flex; align-items: center; gap: 8px; color: #727564; font-size: 14px; margin-bottom: 8px; }
+.lesson-chat-message-label > span { font-size: 14px; background: #eeece1; border-radius: 4px; padding: 1px 5px; }
+.lesson-chat-message > .lesson-text { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 16px; line-height: 1.9; }
+.lesson-chat-answer { font-size: 16px; line-height: 1.9; overflow-wrap: anywhere; }
+.lesson-chat-answer .lesson-text { white-space: pre-wrap; }
+.lesson-chat-answer p + p { margin-top: 14px; }
+.lesson-chat-answer :is(ul,ol) { padding-left: 24px; margin: 13px 0; }
+.lesson-chat-answer li { padding-left: 3px; }
+.lesson-chat-answer li + li { margin-top: 10px; }
+.lesson-chat-answer strong { color: #3c4533; font-weight: 600; }
+.lesson-chat-answer h4 { font-size: 17px; line-height: 1.7; font-weight: 600; margin: 20px 0 10px; }
+.lesson-chat-answer h4:first-child { margin-top: 0; }
+.lesson-chat-answer pre { font-size: 14px; line-height: 1.8; white-space: pre-wrap; background: #f1efe5; border-radius: 7px; padding: 12px; margin: 14px 0; overflow-wrap: anywhere; }
+.lesson-chat-message.is-user > .lesson-text { padding: 12px 14px; border-radius: 10px; background: #f6ede2; color: #66513a; }
+.lesson-chat-thinking { color: #8c6a42; font-size: 14px; line-height: 1.8; }
+.lesson-chat-citations { display: grid; gap: 5px; margin-top: 15px; padding-top: 12px; border-top: 1px solid #e7e1d2; }
+.lesson-chat-citations > span { color: #797965; font-size: 14px; }
+.lesson-chat-citations > button { display: flex; justify-content: space-between; align-items: center; gap: 8px; text-align: left; line-height: 1.6; font-size: 14px; color: #9c5731; padding: 7px 0; overflow-wrap: anywhere; }
+.lesson-chat-citations button svg { flex-shrink: 0; }
+.lesson-chat-citations button:hover { text-decoration: underline; text-underline-offset: 4px; }
+.lesson-chat-bottom { border-top: 1px solid #e5e3d9; padding: 14px; }
+.lesson-chat-composer { background: #fffefa; border: 1px solid #dcd9cb; border-radius: 10px; padding: 10px; }
+.lesson-chat-composer:focus-within { border-color: #d09364; }
+.lesson-chat-composer textarea { width: 100%; display: block; min-height: 70px; max-height: 160px; resize: vertical; font-size: 16px; line-height: 1.7; background: transparent; border: 0; padding: 2px; color: var(--chat-ink); caret-color: #be552d; }
+.lesson-chat-composer textarea:focus-visible { outline-offset: 2px; outline-width: 2px; }
+.lesson-chat-composer textarea::placeholder { color: #77796a; }
+.lesson-chat-composer > div { display: flex; align-items: center; gap: 8px; justify-content: space-between; margin-top: 6px; }
+.lesson-chat-composer > div > span { color: #797762; font-size: 14px; line-height: 1.6; }
+.lesson-chat-send { display: grid; place-items: center; background: #c3532a; color: #fff; border-radius: 8px; flex-shrink: 0; }
+.lesson-chat-send:hover:not(:disabled) { background: #aa4420; }
+.lesson-chat-stop { display: inline-flex; align-items: center; justify-content: center; gap: 5px; border: 1px solid #d7d1c0; border-radius: 7px; padding: 7px 10px; font-size: 14px; color: #7a6445; white-space: nowrap; }
+.lesson-chat-connect { display: inline-flex; align-items: center; gap: 6px; color: #9a522d; padding: 6px 3px 0; font-size: 14px; }
+.lesson-chat-error { display: flex; gap: 8px; align-items: flex-start; padding: 10px; margin-bottom: 10px; border-radius: 8px; background: #fff0e5; color: #8b4d2d; font-size: 14px; line-height: 1.7; }
+.lesson-chat-error p { flex: 1; overflow-wrap: anywhere; }
+.lesson-chat-error > button { color: #8b4d2d; font-size: 14px; }
+.lesson-chat-error > button:last-child { display: grid; place-items: center; margin-top: -5px; margin-right: -5px; flex-shrink: 0; }
+.lesson-chat-sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.lesson-chat-overlay { position: fixed; inset: 0; background: #302d2259; z-index: 90; }
+.lesson-chat-drawer { position: fixed; z-index: 91; inset: 0 0 0 auto; width: min(100%, 450px); height: 100dvh; min-height: 0; top: 0; border-left: 1px solid #dfddcf; outline: 0; padding-bottom: env(safe-area-inset-bottom); }
+@media (max-width: 600px) { .lesson-chat-context { padding: 12px 16px; } .lesson-chat-heading { padding-left: 16px; } .lesson-chat-messages { padding: 20px 16px; } .lesson-chat-bottom { padding: 12px; } .lesson-chat-composer textarea { min-height: 64px; } }
+@media (max-height: 650px) { .lesson-chat-drawer .lesson-chat-context > p { display: none; } .lesson-chat-drawer .lesson-chat-messages { min-height: 110px; } .lesson-chat-drawer .lesson-chat-composer textarea { min-height: 44px; } }

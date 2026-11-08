@@ -1,0 +1,37 @@
+.newbie-guide {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 60;
+  width: min(330px, calc(100vw - 32px));
+  padding: 16px 18px 13px;
+  border: 1px solid #e2d9c6;
+  border-radius: 14px;
+  background: #fffdf8;
+  box-shadow: 0 18px 45px #4a3a241f;
+  color: #4c4a40;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.newbie-guide-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.newbie-guide-head > span { font-size: 12px; letter-spacing: .04em; color: #a3855c; }
+.newbie-guide-close { display: grid; place-items: center; min-width: 30px; min-height: 30px; border-radius: 6px; color: #8b8474; }
+.newbie-guide-close:hover { background: #f3eee2; }
+.newbie-guide h3 { margin: 6px 0 4px; font-size: 16px; font-weight: 600; color: #39362d; }
+.newbie-guide p { margin: 0; color: #625e51; }
+.newbie-guide-actions { display: flex; align-items: center; gap: 8px; margin-top: 13px; }
+.newbie-guide-actions > button { display: inline-flex; align-items: center; justify-content: center; gap: 5px; min-height: 38px; padding: 7px 12px; border: 1px solid #e0d8c6; border-radius: 8px; background: #fff; color: #6a604c; font-size: 13px; }
+.newbie-guide-actions > button:hover:not(:disabled) { background: #f6f1e6; }
+.newbie-guide-actions > button:disabled { opacity: .45; }
+.newbie-guide-next { flex: 1; background: #fff0e7 !important; border-color: #f0c9b2 !important; color: #a0431f !important; font-weight: 600; }
+.newbie-guide-dismiss { display: flex; align-items: center; gap: 7px; margin-top: 10px; font-size: 12px; color: #9a9284; }
+.newbie-guide-dismiss button { min-height: 28px; padding: 2px 0; font-size: 12px; color: #8d8472; text-decoration: underline; text-underline-offset: 3px; }
+.newbie-guide-dismiss button:hover { color: #a0431f; }
+.sf-guide-focus { outline: 2px solid #e39a6a; outline-offset: 3px; border-radius: 8px; animation: sf-guide-pulse 1.8s ease-in-out infinite; }
+@keyframes sf-guide-pulse { 0%, 100% { outline-color: #e39a6a80; } 50% { outline-color: #d8692f; } }
+@media (max-width: 640px) {
+  .newbie-guide { right: 12px; left: 12px; bottom: 76px; width: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sf-guide-focus { animation: none; }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+<title>人文：思想与视角</title>
+<rect width="640" height="360" fill="#E7E2D6"/>
+<text x="32" y="44" fill="#171717" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">HUMANITIES</text>
+<path d="M32 65H608" stroke="#171717" stroke-opacity=".25"/>
+<circle cx="184" cy="196" r="100" fill="#FA5B35"/>
+<path d="M85 297V175c0-58 43-101 99-101s99 43 99 101v122h-39V175c0-37-24-63-60-63s-60 26-60 63v122Z" fill="#191919"/>
+<path d="M320 297V177c0-56 39-97 93-97s93 41 93 97v120h-34V177c0-35-24-61-59-61s-59 26-59 61v120Z" fill="#191919"/>
+<path d="M400 297V177c0-56 39-97 93-97s93 41 93 97v120h-34V177c0-35-24-61-59-61s-59 26-59 61v120Z" fill="#A19B8D"/>
+<path d="M32 298H608" stroke="#191919" stroke-width="2"/>
+<text x="34" y="333" fill="#171717" font-family="monospace" font-size="13" letter-spacing="2">IDEAS &amp; PERSPECTIVES</text>
+</svg>

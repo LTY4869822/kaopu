@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": 3,
+  "coverage": [
+    "transient chunk failure reloads current route",
+    "persistent failure shows recovery without a loop",
+    "auth check does not flash the landing page"
+  ]
+}

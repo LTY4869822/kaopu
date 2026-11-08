@@ -1,0 +1,52 @@
+.app-shell .workspace-practice .topbar { height: 72px; }
+.app-shell .workspace-practice .topbar .icon-button { min-width: 44px; height: 44px; }
+.app-shell .workspace-practice .sf-command-shortcut { min-height: 44px; box-shadow: none; }
+.app-shell .page-practice { max-width: 1380px; padding-top: 28px; }
+.app-shell .page-practice > .page-heading { margin-bottom: 20px; }
+.app-shell .page-practice h1 { font-size: 32px; line-height: 1.4; font-weight: 650; }
+.app-shell .page-practice > .page-heading p { margin-top: 8px; color: var(--sf-muted); }
+.practice-hub { min-width: 0; }
+.practice-hub-loading { padding: 32px 0; font-size: 16px; color: var(--sf-muted); }
+.practice-hub-tabs { display: flex; align-items: center; gap: 28px; width: 100%; margin: 0 0 20px; border-bottom: 1px solid var(--sf-line); }
+.practice-hub-tabs > button { position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; padding: 11px 2px 14px; border: 0; background: transparent; color: var(--sf-muted); font-size: 16px; font-weight: 500; white-space: nowrap; transition: color 160ms, background 160ms; }
+.practice-hub-tabs > button::after { position: absolute; content: ""; bottom: -1px; left: 0; right: 0; height: 2px; border-radius: 2px; background: var(--sf-accent); transform: scaleX(0); transition: transform 180ms ease-out; }
+.practice-hub-tabs > button[aria-selected="true"] { color: var(--sf-ink); font-weight: 600; }
+.practice-hub-tabs > button[aria-selected="true"]::after { transform: scaleX(1); }
+.practice-hub-tabs > button[aria-selected="true"] svg { color: var(--sf-accent); }
+.practice-hub-tabs > button:hover { color: var(--sf-ink); }
+.practice-hub-tabs > button:focus-visible { outline: 2px solid var(--sf-accent); outline-offset: 3px; border-radius: 4px; }
+.practice-hub-panel { min-width: 0; }
+.practice-hub-panel[hidden] { display: none; }
+.practice-hub-quick { max-width: 1040px; }
+.practice-hub-ask { max-width: 960px; }
+.app-shell .practice-hub-ask .ask-panel { padding: 28px; border-radius: 14px; box-shadow: none; }
+.practice-hub-ask .assistant-label > svg { color: var(--sf-accent); background: var(--sf-soft); border-radius: 10px; }
+.practice-hub-ask .assistant-label h2 { font-size: 20px; line-height: 1.6; }
+.practice-hub-ask .assistant-label span { font-size: 14px; color: var(--sf-muted); }
+.practice-hub-ask .ask-panel form { background: #faf9f5; border-color: var(--sf-line); }
+.practice-hub-ask .ask-panel form:focus-within { border-color: var(--sf-accent); }
+.practice-hub-ask .ask-panel textarea { font-size: 16px; line-height: 1.8; }
+.practice-hub-ask .ask-form-bottom small { font-size: 14px; color: var(--sf-muted); }
+.practice-hub-ask .ask-form-bottom .primary { font-size: 16px; }
+.practice-hub-ask .ask-intro > button { min-height: 48px; font-size: 16px; line-height: 1.7; color: #494c44; }
+.practice-hub-ask .ask-intro > button:hover { color: var(--sf-accent); }
+.practice-hub-ask :is(.ask-intro > p, .local-note) { color: var(--sf-muted); }
+.practice-hub-ask .local-note { padding: 16px; background: #f5f4ef; }
+.practice-hub-ask .retrieval-result summary { min-height: 44px; display: flex; align-items: center; font-size: 15px; line-height: 1.7; cursor: pointer; }
+.practice-ask-course { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; font-size: 15px; margin-bottom: 24px; color: var(--sf-muted); }
+.practice-ask-course select { min-height: 46px; min-width: min(100%, 200px); max-width: 100%; font-size: 16px; background: var(--sf-paper); }
+.practice-hub :is(input, textarea) { caret-color: var(--sf-accent); }
+.app-shell .practice-hub :is(input, select, textarea):focus { border-color: var(--sf-accent); }
+.practice-hub ::selection { background: #f7dacc; color: #31231d; }
+@media (max-width: 760px) {
+  .app-shell .workspace-practice .topbar { height: 64px; }
+  .app-shell .page-practice { padding-top: 22px; }
+  .app-shell .page-practice h1 { font-size: 28px; }
+  .app-shell .page-practice > .page-heading { margin-bottom: 16px; }
+  .practice-hub-tabs { gap: 8px; justify-content: space-between; margin-bottom: 18px; }
+  .practice-hub-tabs > button { flex: 1; gap: 6px; padding: 10px 2px 13px; font-size: 15px; min-width: 0; }
+  .practice-hub-tabs > button svg { width: 17px; flex-shrink: 0; }
+  .app-shell .practice-hub-ask .ask-panel { padding: 20px; }
+}
+@media (max-width: 360px) { .practice-hub-tabs > button { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .practice-hub-tabs > button, .practice-hub-tabs > button::after { transition: none; } }

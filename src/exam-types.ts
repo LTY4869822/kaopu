@@ -1,0 +1,23 @@
+import type { AssessmentSource } from './assessment-types';
+
+export type ExamQuestionType = 'single-choice' | 'multiple-choice' | 'true-false' | 'fill-blank' | 'short-answer' | 'calculation';
+export type ExamDifficulty = 'easy' | 'medium' | 'hard';
+export type ExamGoal = 'pass' | 'balanced' | 'excellent';
+export type ExamAnswer = string | string[];
+export type ExamSection = { id?: string; type: ExamQuestionType; count: number; points: number; difficulty: ExamDifficulty; topics: string[] };
+export type ExamTemplate = { id: string; courseId: string; title: string; sections: ExamSection[]; durationMinutes: number; focus: string; documentIds: string[]; confirmed: boolean; createdAt: string; updatedAt: string; warning: string; sources: AssessmentSource[]; sourceCoverage?: { sampledChunks: number; totalChunks: number; sampledCharacters: number; truncated: boolean } };
+export type ExamPaperSummary = { id: string; courseId: string; title: string; sections: ExamSection[]; durationMinutes: number; totalQuestions: number; totalPoints: number; goal: ExamGoal; focus: string; sourcePolicy: 'materials' | 'extended'; documentIds: string[]; templateId?: string; createdAt: string; warning: string; available: boolean };
+export type ExamQuestion = { id: string; sectionId: string; number: number; type: ExamQuestionType; points: number; difficulty: ExamDifficulty; topic: string; prompt: string; options: {id: string; text: string}[]; origin: 'material-based' | 'ai-extension' };
+export type ExamPaper = ExamPaperSummary & { questions: ExamQuestion[] };
+export type ExamWeakTopic = { topic: string; questionIds: string[]; sourceRefs: AssessmentSource[] };
+export type ExamScoreSummary = { objectiveEarned: number; objectiveTotal: number; pendingPoints: number; totalPoints: number; answered: number; totalQuestions: number; correct: number; incorrect: number; ungraded: number; helped: number; independent: boolean; aiSuggestedEarned?: number; aiSuggestedTotal?: number; aiAssessedQuestions?: number; weakTopics?: ExamWeakTopic[] };
+export type ExamReview = { selfAssessment?: 'correct' | 'partial' | 'incorrect'; reason?: 'concept' | 'condition' | 'method' | 'calculation' | 'memory' | 'time'; note?: string };
+export type ExamAIAssessment = { status: 'correct' | 'partial' | 'incorrect' | 'ungraded'; suggestedPoints: number | null; maxPoints: number; confidence: number; feedback: string; weakPoints: { topic: string; reason: string; evidence: string; sourceRefs: AssessmentSource[] }[]; sourceRefs: AssessmentSource[]; createdAt: string; warning: string };
+export type ExamQuestionResult = { questionId: string; answer: ExamAnswer; status: 'correct' | 'incorrect' | 'ungraded' | 'unanswered'; earned: number | null; points: number; expectedAnswer: string; answerKey: ExamAnswer | null; rubric: string; explanation: string; steps: string[]; sources: AssessmentSource[]; helpUsed: boolean; feedback: string; review?: ExamReview; aiAssessment?: ExamAIAssessment };
+export type ExamAttemptSummary = { id: string; paperId: string; courseId: string; title: string; mode: 'exam' | 'practice'; status: 'in-progress' | 'submitted'; revision: number; startedAt: string; updatedAt: string; deadlineAt: string | null; submittedAt?: string; summary?: ExamScoreSummary; available: boolean };
+export type ExamGradingJob = { id: string; kind: 'grading'; attemptId: string; courseId: string; status: 'queued' | 'generating' | 'completed' | 'failed' | 'cancelled'; completed: number; total: number; message: string };
+export type ExamAttempt = ExamAttemptSummary & { paper: ExamPaper; answers: Record<string, ExamAnswer>; flaggedQuestionIds: string[]; helpedQuestionIds: string[]; results?: ExamQuestionResult[]; gradingJob?: ExamGradingJob };
+export type ExamJob = { id: string; courseId: string; status: 'queued' | 'generating' | 'completed' | 'failed' | 'cancelled'; completed: number; total: number; message: string; paperId?: string };
+export type ExamLibrary = { configured: boolean; templates: ExamTemplate[]; papers: ExamPaperSummary[]; attempts: ExamAttemptSummary[]; jobs?: ExamJob[] };
+export type ExamPaperRequest = { courseId: string; title: string; sections: ExamSection[]; durationMinutes: number; goal: ExamGoal; focus: string; sourcePolicy: 'materials' | 'extended'; documentIds: string[]; templateId?: string; retryFrom?: { attemptId: string; questionIds: string[] } };
+export type ExamHint = { questionId: string; level: number; text: string; sources: AssessmentSource[]; attempt: ExamAttempt };

@@ -1,0 +1,38 @@
+.model-settings-overlay { background: #15151566; }
+.model-settings-dialog { max-width: 620px; background: #fff; color: #30302b; border-radius: 14px; box-shadow: 0 24px 65px #00000026; }
+.model-settings-dialog .modal-heading h2 { font-size: 24px; color: #30302b; }
+.model-settings-dialog > p { color: #62625b; font-size: 14px; line-height: 1.7; margin-top: 10px; }
+.model-service-tabs { display: flex; gap: 6px; padding: 5px; border-radius: 10px; background: #f2f2ee; margin-top: 22px; }
+.model-service-tabs button { display: flex; flex: 1; gap: 8px; align-items: center; justify-content: center; min-height: 44px; padding: 10px 12px; border-radius: 7px; color: #62625b; font-size: 15px; }
+.model-service-tabs button[aria-pressed=true] { background: #fff; color: #a63c1c; box-shadow: 0 2px 5px #0000000d; }
+.model-settings-form { display: grid; gap: 18px; margin-top: 20px; }
+.model-settings-form > label:not(.model-reuse) { display: grid; gap: 8px; color: #50504a; font-size: 14px; position: relative; }
+.model-settings-form input:not([type=checkbox]) { width: 100%; min-width: 0; min-height: 46px; color: #30302b; background: #fff; border: 1px solid #d7d7cf; border-radius: 8px; font-size: 16px; padding: 11px 13px; caret-color: #b7421d; }
+.model-settings-form input::placeholder { color: #72726b; font-size: 14px; }
+.model-service-status { display: flex; align-items: center; gap: 7px; color: #66665e; font-size: 14px; min-height: 26px; }
+.model-service-status.is-verified { color: #52643f; }
+.model-service-status > button { margin-left: auto; color: #a63c1c; padding: 2px 0 2px 8px; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; }
+.model-reuse { display: flex; align-items: center; gap: 9px; color: #44443d; font-size: 15px; min-height: 32px; }
+.model-reuse input { accent-color: #be461e; width: 18px; height: 18px; }
+.model-reuse small { margin-left: auto; font-size: 14px; color: #6d6d65; }
+.model-reuse-info { display: grid; gap: 9px; background: #f6f6f1; border-radius: 9px; padding: 17px; overflow-wrap: anywhere; }
+.model-reuse-hint { margin: -2px 0 4px; padding: 10px 12px; border-radius: 8px; background: #fbf7ee; color: #6b6250; font-size: 13px; line-height: 1.8; }
+.model-reuse-info strong { color: #383831; font-size: 16px; font-weight: 550; }
+.model-reuse-info span { color: #62625b; font-size: 14px; }
+.model-key-help { position: absolute; right: 0; top: 0; font-size: 14px; color: #6b6b62; }
+.model-service-error, .model-service-feedback { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 1.7; margin: 0; padding: 12px 14px; border-radius: 8px; overflow-wrap: anywhere; }
+.model-service-error { color: #963e24; background: #fff2eb; }
+.model-service-feedback { color: #4f613e; background: #f1f5eb; }
+.model-service-error > svg, .model-service-feedback > svg { flex-shrink: 0; margin-top: 3px; }
+.model-settings-actions { display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid #e5e5df; padding: 16px 0 2px; margin-top: 2px; position: sticky; bottom: -1px; background: #fff; box-shadow: 0 -12px 16px #ffffffed; }
+.model-settings-actions button { min-height: 46px; font-size: 15px; }
+.model-settings-dialog :focus-visible { outline: 2px solid #bc441e; outline-offset: 4px; }
+.model-settings-dialog ::selection { background: #ffe2d2; color: #39291d; }
+@media (max-width: 640px) {
+  .model-settings-dialog { padding: 22px; }
+  .model-settings-form { gap: 16px; }
+  .model-settings-actions { justify-content: stretch; }
+  .model-settings-actions button { flex: 1; }
+  .model-reuse { flex-wrap: wrap; }
+  .model-reuse small { margin-left: 27px; width: 100%; }
+}

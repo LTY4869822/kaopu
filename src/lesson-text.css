@@ -1,0 +1,55 @@
+.lesson-text {
+  min-width: 0;
+  max-width: 100%;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.lesson-text-math {
+  white-space: normal;
+  overflow-wrap: normal;
+  text-indent: 0;
+}
+
+.lesson-text-math .katex {
+  font-size: 1.06em;
+  text-rendering: auto;
+}
+
+.lesson-text-math-inline {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-inline: .12em;
+}
+
+.lesson-text-math-display {
+  display: block;
+  max-width: 100%;
+  margin: .45em 0;
+  padding: .55em .15em .7em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+
+.lesson-text-math-display .katex-display {
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
+  padding-inline: .1em;
+}
+
+.lesson-text-math-source {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+}
+
+@media (max-width: 600px) {
+  .lesson-text-math .katex { font-size: 1em; }
+  .lesson-text-math-display { margin-block: .35em; padding-block: .55em; }
+}

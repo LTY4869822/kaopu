@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+<title>数学：积分与变化</title>
+<rect width="640" height="360" fill="#FA5B35"/>
+<g stroke="#171717" stroke-opacity=".12"><path d="M288 80V360M352 80V360M416 80V360M480 80V360M544 80V360M608 80V360M260 112H640M260 176H640M260 240H640M260 304H640"/></g>
+<text x="32" y="44" fill="#171717" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">MATHEMATICS</text>
+<path d="M32 65H608" stroke="#171717" stroke-opacity=".3"/>
+<text x="36" y="282" fill="#171717" font-family="Georgia,serif" font-size="245">∫</text>
+<text x="150" y="279" fill="#171717" font-family="Georgia,serif" font-size="57" font-style="italic">f(x)dx</text>
+<path d="M304 303C340 304 352 272 382 255C414 237 417 164 456 150C501 134 505 116 552 100" stroke="#FFF3DD" stroke-width="12"/>
+<path d="M304 303C340 304 352 272 382 255C414 237 417 164 456 150C501 134 505 116 552 100" stroke="#171717" stroke-width="2"/>
+<circle cx="456" cy="150" r="10" fill="#171717" stroke="#FA5B35" stroke-width="4"/>
+<path d="M456 150V304" stroke="#171717" stroke-dasharray="4 6"/>
+<text x="34" y="333" fill="#171717" font-family="monospace" font-size="13" letter-spacing="2">THE ART OF CHANGE</text>
+</svg>

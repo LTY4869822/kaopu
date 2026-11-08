@@ -1,0 +1,7 @@
+# Optional, isolated document extraction service. Formula/VLM enrichment is off.
+docling==2.146.0
+docling-core==2.106.0
+docling-parse==7.24.2
+docling-ibm-models==4.0.4
+rapidocr==3.10.0
+onnxruntime==1.20.1

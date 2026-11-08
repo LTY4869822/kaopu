@@ -1,0 +1,169 @@
+.sf-sculpture {
+  --sf-pointer-x: 0deg;
+  --sf-pointer-y: 0deg;
+  --sf-paper: #eceff0;
+  --sf-paper-ink: #252a2d;
+  --sf-paper-muted: #7b8388;
+  --sf-paper-line: #cbd0d3;
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  max-width: 650px;
+  color: #f3f4f5;
+  container-type: inline-size;
+  isolation: isolate;
+}
+.sf-sculpture * { box-sizing: border-box; }
+.sf-sculpture .sf-sculpture-meta {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 5%;
+  color: #70767d;
+  font: 9px/1.5 "SFMono-Regular", Consolas, monospace;
+  letter-spacing: 1.4px;
+}
+.sf-sculpture .sf-sculpture-scene { position: relative; aspect-ratio: 1.3; perspective: 1400px; }
+.sf-sculpture .sf-sculpture-stage {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--sf-pointer-y)) rotateY(var(--sf-pointer-x));
+  transition: transform 350ms cubic-bezier(.2,.8,.2,1);
+}
+.sf-sculpture .sf-sculpture-floor {
+  position: absolute;
+  width: 84%;
+  height: 29%;
+  left: 7%;
+  bottom: 1%;
+  border: 1px solid #c6cdd80c;
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+.sf-sculpture .sf-sculpture-floor i { position: absolute; inset: 19%; border: 1px solid #c6cdd807; border-radius: 50%; }
+.sf-sculpture .sf-sculpture-floor i:nth-child(2) { inset: -32% -4%; }
+.sf-sculpture .sf-sculpture-floor i:nth-child(3) { inset: 38% -16%; }
+.sf-sculpture .sf-sculpture-sheet {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: .73;
+  padding: 5.1%;
+  color: var(--sf-paper-ink);
+  background: linear-gradient(135deg, #fff 0%, var(--sf-paper) 40%, #dde1e4 100%);
+  border: 1px solid #f8fafbc7;
+  border-radius: 2px 5px 5px 2px;
+  box-shadow: 1px 1px 0 #9aa1a5, 3px 3px 0 #727a80, 9px 18px 28px #00000038, 30px 48px 65px #00000030;
+  transform-origin: 50% 60%;
+  backface-visibility: hidden;
+  transition: transform 950ms cubic-bezier(.22,.8,.2,1), opacity 450ms ease, box-shadow 950ms ease;
+  overflow: hidden;
+  font-size: 12px;
+  font-size: 2cqw;
+}
+.sf-sculpture .sf-sculpture-sheet::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  left: 7%;
+  background: #ffffff9e;
+  box-shadow: 1px 0 0 #747e8513;
+  pointer-events: none;
+}
+.sf-sculpture .sf-sculpture-sheet :is(h3,h4,p) { margin: 0; color: inherit; }
+.sf-sculpture .sf-sculpture-filetype { display: flex; align-items: center; gap: .5em; color: #646c71; font: .52em/1.5 "SFMono-Regular", Consolas, monospace; letter-spacing: .55px; }
+.sf-sculpture .sf-sculpture-filetype > svg { width: 1.8em; height: 1.8em; flex-shrink: 0; }
+.sf-sculpture .sf-sculpture-filetype small { margin-left: auto; font: inherit; }
+.sf-sculpture .sf-sculpture-sheet h3 { font-size: 2.02em; font-weight: 600; letter-spacing: -.07em; line-height: 1.4; margin-top: 1em; }
+.sf-sculpture .sf-sculpture-sheet p.sf-sculpture-sheet-subtitle { font-size: .66em; line-height: 1.5; color: #6b7379; margin-top: .6em; }
+.sf-sculpture .sf-sculpture-pdf-rule { height: 1px; background: #aeb5ba; margin-top: 1.3em; margin-bottom: .9em; }
+.sf-sculpture .sf-sculpture-section-index { font: .55em/1.5 "SFMono-Regular", Consolas, monospace; color: #7e858b; }
+.sf-sculpture .sf-sculpture-sheet h4 { font-size: 1.08em; line-height: 1.6; font-weight: 600; letter-spacing: -.04em; margin-top: .4em; }
+.sf-sculpture .sf-sculpture-sheet p.sf-sculpture-sheet-copy { color: #71787e; font-size: .62em; line-height: 1.7; margin-top: .65em; }
+.sf-sculpture .sf-sculpture-sheet-footer { display: flex; justify-content: space-between; gap: 1em; position: absolute; left: 13.4%; right: 13.4%; bottom: 7.4%; padding-top: 1em; border-top: 1px solid #b7bec251; font: .47em/1.5 "SFMono-Regular", Consolas, monospace; color: #788086; }
+.sf-sculpture .sf-sculpture-formula { display: flex; justify-content: center; gap: .35em; align-items: center; margin-top: 1.2em; font: italic 1.1em/1.2 Georgia, "Times New Roman", serif; }
+.sf-sculpture .sf-sculpture-limit { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+.sf-sculpture .sf-sculpture-limit small { font-size: .45em; margin-top: .35em; white-space: nowrap; }
+.sf-sculpture .sf-sculpture-fraction { display: flex; flex-direction: column; text-align: center; font-size: .7em; }
+.sf-sculpture .sf-sculpture-fraction > span:first-child { padding-bottom: .35em; border-bottom: 1px solid #626b73; }
+.sf-sculpture .sf-sculpture-fraction > span:last-child { padding-top: .25em; }
+.sf-sculpture .sf-sculpture-paper-lines { display: none; gap: .5em; margin-top: 1.7em; opacity: .7; }
+.sf-sculpture .sf-sculpture-paper-lines i { height: 1px; background: #c5cbd0; }
+.sf-sculpture .sf-sculpture-paper-lines i:nth-child(2) { width: 84%; }
+.sf-sculpture .sf-sculpture-paper-lines i:nth-child(3) { width: 62%; }
+.sf-sculpture .sf-sculpture-pdf { left: 8%; top: 16%; transform: translate3d(0,0,18px) rotateX(13deg) rotateY(-15deg) rotateZ(-16deg); z-index: 2; }
+.sf-sculpture .sf-sculpture-handwriting { left: 55%; top: 5%; width: 32%; aspect-ratio: .77; transform: translate3d(0,0,-14px) rotateX(9deg) rotateY(-14deg) rotateZ(15deg); z-index: 1; background: repeating-linear-gradient(0deg,transparent,transparent 19px,#aab3ba25 19px,#aab3ba25 20px),linear-gradient(130deg,#e4e9ec,#cdd4d9); }
+.sf-sculpture .sf-sculpture-handwritten { margin: 1.3em 0 0 .25em; transform: rotate(-5deg); font-family: "KaiTi", "STKaiti", "Microsoft YaHei", serif; }
+.sf-sculpture .sf-sculpture-handwritten p { font-size: 1.4em; line-height: 1.6; letter-spacing: -.06em; margin-top: .5em; }
+.sf-sculpture .sf-sculpture-handwritten > span { font-size: 1.05em; display: inline-block; border-bottom: 1px solid #3e4854; padding-bottom: .25em; margin-top: .5em; }
+.sf-sculpture .sf-sculpture-handwritten > small { font: italic 1.12em/1.5 Georgia, serif; }
+.sf-sculpture .sf-sculpture-handwritten > i { display: block; width: 69%; border-bottom: 1px solid #65717b; margin: .7em 0; transform: rotate(4deg); }
+.sf-sculpture .sf-sculpture-slides { left: 43%; top: 29%; width: 34%; aspect-ratio: .88; z-index: 4; transform: translate3d(0,0,56px) rotateX(12deg) rotateY(-15deg) rotateZ(9deg); background: linear-gradient(120deg,#fafcfd,#dfe5e9); }
+.sf-sculpture .sf-sculpture-slides .sf-sculpture-section-index { display: block; margin-top: 1.7em; }
+.sf-sculpture .sf-sculpture-slides h4 { font-size: 1.32em; font-weight: 500; line-height: 1.45; margin-top: .55em; }
+.sf-sculpture .sf-sculpture-graph { position: relative; width: 82%; height: 3.3em; margin: 1em auto .65em; border-bottom: 1px solid #a6afb6; }
+.sf-sculpture .sf-sculpture-graph::before { content:""; position: absolute; height: 115%; bottom: -15%; left: 50%; border-left: 1px solid #a6afb6; }
+.sf-sculpture .sf-sculpture-graph > i { position: absolute; left: 50%; bottom: -1px; width: 43%; height: 1px; background: #38444b; transform: rotate(-48deg); transform-origin: 0 50%; }
+.sf-sculpture .sf-sculpture-graph > i:last-child { transform: rotate(-132deg); }
+.sf-sculpture .sf-sculpture-graph > span { position: absolute; right: -.8em; bottom: -.4em; font: italic .7em/1 Georgia, serif; }
+.sf-sculpture .sf-sculpture-graph > span:first-child { right: auto; left: 54%; top: -.8em; bottom: auto; }
+.sf-sculpture .sf-sculpture-slides .sf-sculpture-sheet-copy { font-size: .59em; line-height: 1.6; }
+.sf-sculpture .sf-sculpture-notebook { width: 40%; left: 31%; top: 8%; z-index: 6; aspect-ratio: .715; transform: translate3d(2%,9%,85px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg) scale(.95); opacity: 0; pointer-events: none; padding: 5.3%; background: linear-gradient(120deg,#fff,#e3e8eb); }
+.sf-sculpture .sf-sculpture-notebook-mark { display: inline-flex; align-items: center; justify-content: center; width: 1.6em; height: 1.6em; font-size: 1.4em; font-weight: 700; color: #242b30; }
+.sf-sculpture .sf-sculpture-notebook p.sf-sculpture-notebook-eyebrow { font-size: .57em; letter-spacing: .05em; color: #748089; margin-top: 3em; }
+.sf-sculpture .sf-sculpture-notebook h3 { margin-top: .42em; font-size: 2.36em; line-height: 1.38; letter-spacing: -.075em; }
+.sf-sculpture .sf-sculpture-notebook p.sf-sculpture-notebook-subtitle { font-size: .59em; line-height: 1.7; color: #7c858d; margin-top: 1.2em; }
+.sf-sculpture .sf-sculpture-notebook-rule { height: 1px; background: #adb7be; margin-top: 1.3em; margin-bottom: 1.3em; }
+.sf-sculpture .sf-sculpture-notebook-toc { list-style: none; padding: 0; margin: 0; display: grid; gap: .8em; font-size: .63em; }
+.sf-sculpture .sf-sculpture-notebook-toc li { display: flex; align-items: center; gap: 1em; }
+.sf-sculpture .sf-sculpture-notebook-toc li > span { color: #879198; font: .8em/1 Consolas, monospace; }
+.sf-sculpture .sf-sculpture-notebook-toc li > strong { flex: 1; font-weight: 400; display: flex; align-items: end; gap: 1em; white-space: nowrap; }
+.sf-sculpture .sf-sculpture-notebook-toc li > strong::after { content: ""; flex: 1; border-bottom: 1px dotted #bcc3c8; margin-bottom: .2em; }
+.sf-sculpture .sf-sculpture-notebook-source { display: grid; gap: .5em; margin-top: 1.4em; font-size: .54em; color: #67747c; }
+.sf-sculpture .sf-sculpture-notebook-source > span { display: flex; align-items: center; gap: .65em; }
+.sf-sculpture .sf-sculpture-notebook-source svg { width: 1.15em; height: 1.15em; }
+.sf-sculpture .sf-sculpture-bound-pages { position: absolute; left: 31%; top: 8%; width: 40%; aspect-ratio: .715; transform-style: preserve-3d; z-index: 3; opacity: 0; transition: opacity 450ms ease; }
+.sf-sculpture .sf-sculpture-bound-pages > i { position: absolute; inset: 0; background: #dfe5e8; border: 1px solid #f1f3f4; border-radius: 1px 4px 4px 1px; box-shadow: 2px 1px 0 #5f6b72; transform: translate3d(3%,4%,17px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg); transition: transform 950ms cubic-bezier(.22,.8,.2,1); }
+.sf-sculpture .sf-sculpture-bound-pages > i:nth-child(2) { transform: translate3d(5%,7%,9px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg); }
+.sf-sculpture .sf-sculpture-bound-pages > i:nth-child(3) { transform: translate3d(7%,10%,1px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg); }
+.sf-sculpture .sf-sculpture-bound-pages > i:nth-child(4) { transform: translate3d(9%,13%,-7px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg); background: #87939a; }
+.sf-sculpture .sf-sculpture-edge-label { position: absolute; left: 3%; bottom: 8%; display: flex; align-items: start; flex-direction: column; gap: 8px; font: 8px/1.7 "SFMono-Regular",Consolas,monospace; letter-spacing: 1px; color: #70777d; }
+.sf-sculpture .sf-sculpture-edge-label svg { color: #a1a9af; }
+.sf-sculpture[data-state="gathered"] .sf-sculpture-pdf { transform: translate3d(61%,0,-20px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg) scale(.99); opacity: 0; }
+.sf-sculpture[data-state="gathered"] .sf-sculpture-handwriting { transform: translate3d(-60%,4%,-10px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg) scale(1.1); opacity: 0; }
+.sf-sculpture[data-state="gathered"] .sf-sculpture-slides { transform: translate3d(-35%,-22%,-5px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg) scale(1.05); opacity: 0; }
+.sf-sculpture[data-state="gathered"] .sf-sculpture-notebook { opacity: 1; transform: translate3d(0,0,75px) rotateX(9deg) rotateY(-16deg) rotateZ(5deg); box-shadow: 1px 1px 0 #b8c0c5, 4px 4px 0 #818d96, 14px 28px 32px #00000040, 36px 58px 68px #00000038; }
+.sf-sculpture[data-state="gathered"] .sf-sculpture-bound-pages { opacity: 1; }
+.sf-sculpture .sf-sculpture-controls { display: flex; align-items: center; justify-content: center; gap: 24px; padding-top: 14px; position: relative; z-index: 8; }
+.sf-sculpture .sf-sculpture-controls > button { display: flex; align-items: center; gap: 9px; color: #dce1e4; border: 1px solid #aab6c342; background: #171b20; padding: 12px 14px; border-radius: 5px; cursor: pointer; min-height: 44px; font-family: inherit; font-size: 12px; line-height: 1.3; transition: border-color 180ms ease, background 180ms ease, color 180ms ease; }
+.sf-sculpture .sf-sculpture-controls > button:hover { background: #242a30; color: #fff; border-color: #abb6c67a; }
+.sf-sculpture .sf-sculpture-controls > button:active { background: #11161a; }
+.sf-sculpture .sf-sculpture-controls > button:focus-visible { outline: 2px solid #e3ebe6; outline-offset: 5px; }
+.sf-sculpture .sf-sculpture-controls > button > svg:last-child { margin-left: 9px; }
+.sf-sculpture .sf-sculpture-status { display: flex; align-items: center; gap: 7px; color: #7c878f; font-size: 10px; white-space: nowrap; line-height: 1.5; }
+.sf-sculpture .sf-sculpture-status > i { width: 4px; height: 4px; border-radius: 50%; background: #939ca3; }
+.sf-sculpture[data-state="gathered"] .sf-sculpture-status > i { background: #b9d8c5; }
+.sf-sculpture p.sf-sculpture-disclaimer { text-align: center; font-size: 10px; line-height: 1.7; color: #656f77; margin: 13px 0 0; }
+.sf-sculpture[data-quiet="true"] .sf-sculpture-stage { transform: none; }
+.sf-sculpture[data-quiet="true"] :is(.sf-sculpture-sheet,.sf-sculpture-stage,.sf-sculpture-bound-pages,.sf-sculpture-bound-pages > i) { transition: none; }
+@media(max-width:640px) {
+  .sf-sculpture .sf-sculpture-meta { font-size: 7px; letter-spacing: 1px; padding-inline: 3%; }
+  .sf-sculpture .sf-sculpture-scene { aspect-ratio: 1.12; }
+  .sf-sculpture .sf-sculpture-sheet { font-size: 2.16cqw; }
+  .sf-sculpture .sf-sculpture-pdf { left: 5%; top: 17%; width: 40%; }
+  .sf-sculpture .sf-sculpture-handwriting { left: 56%; top: 6%; width: 35%; }
+  .sf-sculpture .sf-sculpture-slides { left: 43%; top: 30%; width: 37%; }
+  .sf-sculpture .sf-sculpture-notebook,.sf-sculpture .sf-sculpture-bound-pages { left: 30%; top: 9%; width: 44%; }
+  .sf-sculpture .sf-sculpture-edge-label { font-size: 6px; letter-spacing: .5px; left: 3%; bottom: 10%; gap: 5px; }
+  .sf-sculpture .sf-sculpture-edge-label svg { width: 11px; height: 11px; }
+  .sf-sculpture .sf-sculpture-controls { gap: 15px; padding-top: 6px; }
+  .sf-sculpture .sf-sculpture-controls > button { font-size: 11px; padding: 12px; gap: 7px; }
+  .sf-sculpture .sf-sculpture-controls > button > svg:last-child { margin-left: 0; width: 13px; }
+  .sf-sculpture .sf-sculpture-status { font-size: 9px; gap: 5px; }
+  .sf-sculpture p.sf-sculpture-disclaimer { font-size: 9px; margin-top: 12px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .sf-sculpture .sf-sculpture-stage { transform: none; }
+  .sf-sculpture :is(.sf-sculpture-sheet,.sf-sculpture-stage,.sf-sculpture-bound-pages,.sf-sculpture-bound-pages > i) { transition: none; }
+}

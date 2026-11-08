@@ -1,0 +1,134 @@
+/* Course layout only. Colors inherit the shared warm paper and orange system. */
+.course-studio-orbit{border:1px solid var(--cs-line);border-radius:16px;position:relative}
+.course-studio.course-studio-orbit :where(button,input,select,textarea,a):focus-visible{outline-offset:3px}
+.course-studio-orbit .cs-workbench-bar{height:58px;padding:0 22px;gap:18px}
+.course-studio-orbit .cs-workbench-label{font-size:14px;font-weight:500;letter-spacing:.03em}
+.course-studio-orbit .cs-workbench-emblem{width:22px;height:23px;gap:3px}
+.course-studio-orbit .cs-workbench-emblem i{height:15px;width:4px}
+.course-studio-orbit .cs-workbench-emblem i:nth-child(2){height:23px}
+.course-studio-orbit .cs-workbench-emblem i:last-child{height:18px}
+.course-studio-orbit .cs-workbench-flow{font-size:14px}
+.cs-layout-toggles{display:flex;align-items:center;gap:8px;margin-left:auto}
+.course-studio-orbit .cs-layout-toggles button{min-height:40px;border:1px solid var(--cs-line);border-radius:8px;display:flex;align-items:center;gap:8px;padding:8px 13px;font-size:14px;transition:background 180ms,border-color 180ms}
+.course-studio-orbit .cs-columns{position:relative;display:grid;grid-template-columns:250px minmax(0,1fr);height:calc(100dvh - 280px);min-height:520px;max-height:1100px}
+.course-studio-orbit .cs-pane-heading{height:65px;min-height:65px;padding:16px 20px}
+.course-studio-orbit .cs-pane-heading h2{font-size:15px;font-weight:500;gap:10px}
+.course-studio-orbit .cs-pane-heading h2>span{font:12px "Segoe UI",sans-serif;border-radius:5px;min-width:22px;height:23px}
+.course-studio-orbit .cs-search{border:1px solid var(--cs-line);border-radius:8px;margin:0 15px 15px;min-height:44px}
+.course-studio-orbit .cs-search input{font-size:14px;padding:10px 0}
+.course-studio-orbit :is(.cs-icon-button,.cs-add){width:36px;height:36px;min-width:36px;min-height:36px}
+.course-studio-orbit .cs-source-toolbar{padding:0 15px 14px}
+.course-studio-orbit .cs-source-filters button{font-size:14px;min-height:36px;padding:6px 10px;border-radius:7px}
+.course-studio-orbit .cs-source-filters button[aria-pressed=true]{font-weight:500}
+.course-studio-orbit .cs-source-filters button>span{font-size:14px}
+.course-studio-orbit .cs-select-all{font-size:14px!important;min-height:36px}
+.course-studio-orbit .cs-file-list{padding:10px 10px 24px;scrollbar-color:#424a60 transparent;flex:1}
+.course-studio-orbit .cs-source-row{padding:14px 9px;min-height:90px;gap:8px;border-radius:9px;margin:3px 0;border:1px solid transparent;transition:background 180ms,border-color 180ms,transform 200ms}
+.course-studio-orbit .cs-source-row:hover{transform:translateX(2px)}
+.course-studio-orbit .cs-source-preview{gap:10px;align-items:flex-start}
+.course-studio-orbit .cs-source-preview strong{font-size:14px;line-height:1.65;font-weight:400;overflow-wrap:anywhere}
+.course-studio-orbit .cs-source-preview small{font-size:14px;line-height:1.6;margin-top:6px}
+.course-studio-orbit .cs-file-icon{width:30px;height:38px;min-width:30px;border-radius:5px;border:1px solid var(--cs-line)}
+.course-studio-orbit .cs-source-checkbox span{width:18px;height:18px}
+.course-studio-orbit .cs-source-more summary{width:22px}
+.course-studio-orbit .cs-source-more :is(label,button){font-size:14px}
+.course-studio-orbit .cs-source-more select{font-size:14px}
+.course-studio-orbit .cs-sources-foot{padding:16px;font-size:14px;min-height:56px}
+.course-studio-orbit .cs-sources-foot>button{font-size:14px;min-height:36px}
+.course-studio-orbit .cs-source-empty{font-size:14px}
+.course-studio-orbit .cs-conversation{isolation:isolate;overflow:hidden}
+.course-studio-orbit .cs-conversation::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1}
+.course-studio-orbit .cs-conversation>.cs-pane-heading{padding-inline:30px}
+.course-studio-orbit .cs-assistant-status{font-size:14px}
+.course-studio-orbit .cs-chat-scroll{padding:30px 36px;scrollbar-color:#3d4760 transparent}
+.course-studio-orbit .cs-messages{max-width:740px;margin:0 auto;padding:0;gap:30px}
+.course-studio-orbit .cs-message{animation:cs-arrive 280ms var(--cs-ease) both}
+.course-studio-orbit .cs-message-meta{gap:9px}
+.course-studio-orbit .cs-message-meta>strong{font-size:14px;font-weight:500}
+.course-studio-orbit .cs-message-meta>time{font-size:14px}
+.course-studio-orbit .cs-avatar{width:28px;height:28px;font-size:14px;border-radius:8px}
+.course-studio-orbit .cs-message-content{margin:12px 0 0 37px;padding:0}
+.course-studio-orbit .cs-message-user .cs-message-content{border:1px solid var(--cs-line);padding:17px 20px;border-radius:0 12px 12px 12px}
+.course-studio-orbit .cs-message-content .cs-note-body{font-size:16px;line-height:1.85}
+.course-studio-orbit .cs-message-sources{gap:7px;margin-top:14px}
+.course-studio-orbit .cs-message-sources>span{font-size:14px;padding:5px 8px;border-radius:5px}
+.course-studio-orbit .cs-message-artifact{border:0!important;border-radius:12px!important;padding:22px;gap:25px;max-width:610px;min-height:200px;transition:transform 220ms var(--cs-ease),box-shadow 220ms}
+.course-studio-orbit .cs-message-artifact:hover{transform:translateY(-4px)}
+.course-studio-orbit .cs-message-artifact>.cs-result-cover{width:110px;min-width:110px;flex:0 0 110px;height:153px;border:1px solid var(--cs-line);position:relative;display:flex;flex-direction:column;align-items:flex-start;padding:15px 13px;transform:rotate(-5deg);font:8px/1.4 "Segoe UI",sans-serif;letter-spacing:.14em;overflow:hidden;border-radius:2px}
+.cs-result-cover>svg{margin-top:22px}.cs-result-cover>i{position:absolute;right:-20px;bottom:-20px;border:1px solid var(--cs-line);border-radius:50%;width:105px;height:105px}.cs-result-cover>i::before{content:"";position:absolute;inset:10px;border:1px solid var(--cs-line);border-radius:50%}
+.course-studio-orbit .cs-message-artifact>.cs-result-info{display:flex;flex-direction:column;align-items:flex-start;gap:9px;min-width:0;flex:1;font-size:14px}
+.cs-result-info>.cs-result-status{display:flex;gap:5px;align-items:center;font-size:14px}
+.cs-result-info>strong{font-size:20px;line-height:1.55;font-weight:600;letter-spacing:-.03em;text-wrap:balance;overflow-wrap:anywhere}
+.course-studio-orbit .cs-message-artifact small{font-size:14px;margin:0;line-height:1.6}
+.cs-result-read{display:flex;gap:10px;align-items:center;font-size:14px;margin-top:10px}
+.course-studio-orbit .cs-compose-area{padding:22px 30px 13px}
+.course-studio-orbit .cs-composer{max-width:780px;margin:auto;padding:14px 18px;border:1px solid var(--cs-line);border-radius:14px;transition:box-shadow 200ms,border-color 200ms}
+.course-studio-orbit .cs-composer textarea{font-size:16px;line-height:1.8;min-height:70px;max-height:150px;padding:11px 0}
+.course-studio-orbit .cs-context-chips{flex-wrap:nowrap;overflow:auto;max-height:44px;scrollbar-width:thin;gap:7px}
+.course-studio-orbit .cs-context-chip{border:1px solid var(--cs-line);font-size:14px;border-radius:6px;max-width:240px;flex-shrink:0;padding:5px 7px}
+.course-studio-orbit .cs-context-chip>span{font-size:14px;max-width:180px}
+.course-studio-orbit .cs-context-chip button{min-width:24px;min-height:24px}
+.course-studio-orbit .cs-attach-source{font-size:14px;min-height:32px}
+.course-studio-orbit .cs-mode-picker{gap:4px;border:1px solid var(--cs-line);border-radius:9px;padding:3px}
+.course-studio-orbit .cs-mode-picker>button{min-height:36px;padding:6px 10px;font-size:14px;border-radius:6px;transition:background 180ms,color 180ms}
+.course-studio-orbit .cs-send{width:44px;min-width:44px;height:44px;min-height:44px;border-radius:11px;border:1px solid var(--cs-line);transition:transform 180ms,background 180ms}
+.course-studio-orbit .cs-send:disabled{opacity:1}
+.course-studio-orbit .cs-send:not(:disabled):hover{transform:translateY(-2px)}
+.course-studio-orbit .cs-composer-foot{max-width:780px;margin:auto;font-size:14px;padding-top:12px}
+.course-studio-orbit .cs-composer-foot>span:last-child{font-size:14px}
+.course-studio-orbit :is(.cs-model-required,.cs-error,.cs-revision-target){font-size:14px}
+.course-studio-orbit .cs-practice-compose{min-height:88px}.course-studio-orbit .cs-practice-compose p{font-size:14px}
+.course-studio-orbit .cs-job{max-width:740px;margin:24px auto}.course-studio-orbit .cs-job :is(strong,p,small){font-size:14px}
+.course-studio-orbit .cs-drop-overlay{inset:12px;animation:cs-arrive 180ms ease-out}
+.course-studio-orbit .cs-chat-empty{padding:20px 20px 30px;min-height:100%;justify-content:center}
+.course-studio-orbit .cs-paper-illustration{width:165px;height:140px;margin:8px 0 22px}
+.course-studio-orbit .cs-sketch-sheet{border-radius:3px}
+.course-studio-orbit .cs-sketch-back{transform:rotate(-16deg)}
+.course-studio-orbit .cs-sketch-front{transform:rotate(8deg)}
+.course-studio-orbit .cs-sketch-front>span{font-size:14px}
+.course-studio-orbit .cs-sketch-cross{transform:rotate(14deg)}
+.course-studio-orbit .cs-empty-kicker{font-size:14px;letter-spacing:.1em}
+.course-studio-orbit .cs-chat-empty h2{font-size:clamp(26px,2.6vw,38px);line-height:1.4;letter-spacing:-.04em;margin-top:12px;font-weight:500}
+.course-studio-orbit .cs-chat-empty>p{font-size:14px;margin-top:12px}
+.course-studio-orbit .cs-start-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;width:auto;max-width:650px;margin-top:26px;border:0}
+.course-studio-orbit .cs-start-actions>button{border:1px solid var(--cs-line);border-radius:9px;padding:12px 15px;font-size:14px;min-height:44px;gap:9px}
+.course-studio-orbit .cs-start-actions>button>svg:last-child{display:none}.course-studio-orbit .cs-start-actions>button:hover{padding-left:15px;transform:translateY(-2px)}
+.cs-shelf-backdrop{display:none}
+.course-studio-orbit .cs-output-tabs{padding:0 20px;gap:20px}.course-studio-orbit .cs-output-tabs>button{font-size:14px;padding:13px 4px;min-height:48px}
+.cs-note-list{padding:8px 23px 24px;overflow:auto;flex:1;min-height:0}.cs-note-file{padding:22px 0;border-bottom:1px solid var(--cs-line)}.cs-note-open{display:flex;align-items:flex-start;width:100%;text-align:left;gap:16px;padding:0}.cs-note-file-icon{width:45px;height:58px;flex-shrink:0;display:grid;place-items:center;border:1px solid var(--cs-line);border-radius:2px;transform:rotate(-4deg)}.cs-note-open>span:nth-child(2){flex:1;min-width:0}.cs-note-open strong{font-size:17px;font-weight:500;line-height:1.65;overflow-wrap:anywhere;display:block}.cs-note-open small{display:block;font-size:14px;margin-top:10px}.cs-note-open>svg{margin-top:8px}
+.cs-note-file-actions{display:flex;align-items:center;gap:7px;margin-top:20px;flex-wrap:wrap}.course-studio-orbit .cs-note-file-actions button{min-height:40px;font-size:14px;padding:8px 10px;border-radius:6px}.cs-note-file-actions button:last-child{margin-left:auto}.cs-note-stale{font-size:14px;line-height:1.7;margin-top:15px!important}.course-studio-orbit .cs-artifact-empty>strong{font-size:20px}.course-studio-orbit .cs-artifact-empty>p{font-size:14px;line-height:1.9}.course-studio-orbit .cs-artifact-empty-tag{font-size:14px}.course-studio-orbit .cs-paper-item small{font-size:14px}
+@keyframes cs-arrive{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:951px){.course-studio-orbit .cs-columns[data-sources=false]{grid-template-columns:minmax(0,1fr)}.course-studio-orbit .cs-columns[data-sources=false]>.cs-sources{display:none}.course-studio-orbit .cs-artifacts{position:absolute;right:0;top:0;bottom:0;z-index:12;width:390px;max-width:calc(100% - 40px);transform:translateX(101%);visibility:hidden;transition:transform 300ms var(--cs-ease),visibility 300ms}.course-studio-orbit .cs-columns[data-outputs=true]>.cs-artifacts{transform:translateX(0);visibility:visible}.course-studio-orbit .cs-columns[data-outputs=true]>.cs-shelf-backdrop{display:block;position:absolute;inset:0;z-index:11;border:0;cursor:pointer}}
+@media(max-width:1200px) and (min-width:951px){.course-studio-orbit .cs-columns{grid-template-columns:225px minmax(0,1fr)}.course-studio-orbit .cs-workbench-flow{display:none}.course-studio-orbit .cs-chat-scroll{padding:25px}.course-studio-orbit .cs-result-info>strong{font-size:18px}}
+@media(max-width:950px){.course-studio-orbit .cs-layout-toggles{display:none}.course-studio-orbit .cs-workbench-flow{margin-left:auto;font-size:14px}.course-studio-orbit .cs-columns{display:block;height:calc(100dvh - 278px);min-height:480px}.course-studio-orbit .cs-mobile-tabs{display:flex;padding:8px 14px;gap:6px}.course-studio-orbit .cs-mobile-tabs>button{flex:1;border-radius:7px;font-size:14px;min-height:44px}.course-studio-orbit .cs-columns>.cs-pane{height:100%;display:none}.course-studio-orbit .cs-columns[data-pane=sources]>.cs-sources,.course-studio-orbit .cs-columns[data-pane=chat]>.cs-conversation,.course-studio-orbit .cs-columns[data-pane=artifacts]>.cs-artifacts{display:flex}.course-studio-orbit .cs-close-shelf{display:none}.course-studio-orbit .cs-pane-heading{height:60px;min-height:60px}.course-studio-orbit .cs-chat-scroll{padding:24px}.course-studio-orbit .cs-source-row{min-height:82px}.course-studio-orbit .cs-source-preview strong{font-size:16px}.course-studio-orbit .cs-source-preview small{font-size:14px}.course-studio-orbit .cs-compose-area{padding:14px 18px 12px}.course-studio-orbit .cs-composer-foot>span:last-child{display:none}.course-studio-orbit .cs-chat-empty{padding-top:20px}.course-studio-orbit .cs-paper-illustration{height:110px;margin-bottom:12px;transform:scale(.8)}.course-studio-orbit .cs-chat-empty h2{font-size:27px}.course-studio-orbit .cs-start-actions{margin-top:20px}}
+@media(max-width:760px){.course-studio-orbit{border-radius:12px}.course-studio-orbit .cs-workbench-bar{height:50px;min-height:50px;padding:0 16px}.course-studio-orbit .cs-workbench-label{font-size:14px}.course-studio-orbit .cs-workbench-flow{display:none}.course-studio-orbit .cs-columns{height:calc(100dvh - 302px);min-height:440px}.course-studio-orbit .cs-conversation>.cs-pane-heading{padding-inline:17px}.course-studio-orbit .cs-assistant-status{font-size:14px}.course-studio-orbit .cs-chat-scroll{padding:22px 16px}.course-studio-orbit .cs-message-content{margin-left:0}.course-studio-orbit .cs-message-user .cs-message-content{padding:14px}.course-studio-orbit .cs-message-content .cs-note-body{font-size:15px}.course-studio-orbit .cs-message-artifact{padding:17px;gap:17px;min-height:174px}.course-studio-orbit .cs-message-artifact>.cs-result-cover{flex-basis:78px;width:78px;min-width:78px;height:120px;padding:11px 8px;font-size:14px}.cs-result-cover>svg{margin-top:15px;width:21px}.course-studio-orbit .cs-result-info>strong{font-size:17px}.cs-result-read{font-size:14px;margin-top:4px}.course-studio-orbit .cs-message-artifact small{font-size:14px}.cs-result-info>.cs-result-status{font-size:14px}.course-studio-orbit .cs-compose-area{padding:12px}.course-studio-orbit .cs-composer{padding:10px 12px}.course-studio-orbit .cs-composer textarea{min-height:65px;font-size:16px}.course-studio-orbit .cs-context-chip>span{max-width:140px}.course-studio-orbit .cs-mode-picker>button{padding:6px 8px;font-size:14px}.course-studio-orbit .cs-composer-foot{font-size:14px;padding-top:9px}.course-studio-orbit .cs-chat-empty>p{font-size:14px}.course-studio-orbit .cs-paper-illustration{display:none}.course-studio-orbit .cs-chat-empty h2{font-size:25px}.course-studio-orbit .cs-start-actions{gap:7px}.course-studio-orbit .cs-start-actions>button{font-size:14px;padding:8px 11px;min-height:40px}.course-studio-orbit .cs-empty-kicker{font-size:14px}.course-studio-orbit .cs-chat-empty{padding-inline:4px;justify-content:flex-start}.cs-note-list{padding-inline:20px}.cs-note-open strong{font-size:17px}.course-studio-orbit .cs-note-file-actions button{min-height:44px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){.course-studio-orbit *,.course-studio-orbit *::before,.course-studio-orbit *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.course-studio-orbit .cs-source-row:hover,.course-studio-orbit .cs-message-artifact:hover,.course-studio-orbit .cs-start-actions>button:hover{transform:none}}
+
+@media(max-width:420px){.course-studio-orbit .cs-note-file-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.course-studio-orbit .cs-note-file-actions button:first-child{grid-column:1/-1}.course-studio-orbit .cs-note-file-actions button:last-child{margin-left:0}.course-studio-orbit .cs-source-checkbox{min-width:24px;min-height:36px;display:grid;place-items:center}}
+@media(min-width:761px){.course-studio-orbit .cs-chat-empty{display:grid;grid-template-columns:165px minmax(0,1fr);grid-template-areas:"art kicker" "art title" "art description" "actions actions";align-content:center;align-items:center;text-align:left;column-gap:25px;max-width:720px;margin:auto;padding:12px 20px}.course-studio-orbit .cs-paper-illustration{grid-area:art;height:140px;margin:0;transform:rotate(-3deg)}.course-studio-orbit .cs-empty-kicker{grid-area:kicker;margin:0;align-self:end}.course-studio-orbit .cs-chat-empty h2{grid-area:title;font-size:32px;line-height:1.45;margin:12px 0}.course-studio-orbit .cs-chat-empty>p{grid-area:description;margin:0;align-self:start}.course-studio-orbit .cs-start-actions{grid-area:actions;margin-top:26px;justify-self:center}}
+
+
+.course-studio.course-studio-orbit{--cs-ink:#292e29;--cs-muted:#6e7268;--cs-line:#e3e3da;--cs-paper:#fffefa;--cs-sage:#b94b28;--cs-sage-light:#fff1e9;--cs-orange:#c7502a;background:var(--cs-paper);color:var(--cs-ink);box-shadow:none;border-radius:14px}
+.course-studio-orbit :where(button,input,select,textarea){color-scheme:light}
+.course-studio-orbit .cs-layout-toggles button{color:var(--cs-muted);background:transparent;border:1px solid var(--cs-line);min-height:44px;font-size:14px}
+.course-studio-orbit .cs-layout-toggles button[aria-expanded=true]{color:#a74022;background:#fff1e9;border-color:#ebd5c7}
+.course-studio-orbit .cs-layout-toggles button:hover{background:#f3f2eb}
+.course-studio-orbit .cs-columns[data-outputs=true]>.cs-shelf-backdrop{background:#272b2440}
+.course-studio-orbit .cs-artifacts{background:#faf9f4;box-shadow:-12px 0 36px #282b241a}
+.course-studio-orbit .cs-composer{background:#fffefa;border:1px solid #dcded3;box-shadow:0 4px 18px #34342608}
+.course-studio-orbit .cs-composer:focus-within{border-color:#c7502a;outline:2px solid #c7502a20;outline-offset:2px}
+.course-studio.course-studio-orbit .cs-send{background:#c7502a;color:white;border-color:#c7502a}
+.course-studio.course-studio-orbit .cs-send:hover:not(:disabled){background:#a83f20;transform:none}
+.course-studio.course-studio-orbit .cs-send:disabled{background:#efeee8;color:#9b9e93;border-color:#e2e2d8}
+.course-studio-orbit .cs-mode-picker>button[aria-pressed=true]{background:#fff1e9;color:#a74022;border-color:#e6c7b5}
+.course-studio-orbit .cs-chat-empty h2{font-size:28px;line-height:1.5;font-weight:600}
+.course-studio-orbit .cs-start-actions>button{border:1px solid var(--cs-line);background:#fffefa;font-size:14px;min-height:44px}
+.course-studio-orbit .cs-start-actions>button:hover{border-color:#cfaa93;background:#fff6f0}
+.course-studio-orbit :where(button,input,select,textarea,a):focus-visible{outline:2px solid #c7502a;outline-offset:3px}
+.course-studio-orbit .cs-mobile-tabs>button[aria-selected=true]{color:#a94224;background:#fff1e9;box-shadow:none}
+.course-studio-orbit .cs-mobile-tabs>button{color:#6e7268}
+.course-studio-orbit .cs-workbench-emblem i{background:#cf613c}
+.course-studio-orbit .cs-workbench-label,.course-studio-orbit .cs-pane-heading h2,.course-studio-orbit .cs-chat-empty h2{color:#2d302a}
+.course-studio-orbit .cs-assistant-status{color:#6e7268}
+.course-studio-orbit .cs-composer textarea{color:#2d302a}
+.course-studio-orbit .cs-composer textarea::placeholder{color:#73766c}

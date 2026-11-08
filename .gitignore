@@ -1,0 +1,16 @@
+node_modules/
+dist/
+data/
+backups/
+.env
+*.log
+test-results/
+playwright-report/
+output/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+.venv-docling/
+.local/
+.impeccable/questions/
+.impeccable/review/

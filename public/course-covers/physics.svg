@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+<title>物理：运动与能量</title>
+<rect width="640" height="360" fill="#191919"/>
+<text x="32" y="44" fill="#F7F2E7" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">PHYSICS</text>
+<path d="M32 65H608" stroke="#F7F2E7" stroke-opacity=".25"/>
+<g stroke="#F7F2E7" stroke-opacity=".2"><circle cx="475" cy="236" r="67"/><circle cx="475" cy="236" r="99"/><circle cx="475" cy="236" r="131"/><circle cx="475" cy="236" r="163"/><circle cx="475" cy="236" r="195"/></g>
+<path d="M30 239C60 239 60 141 90 141S120 286 150 286S180 112 210 112S240 288 270 288S300 183 330 183S360 244 390 244" stroke="#FA5B35" stroke-width="5"/>
+<ellipse cx="475" cy="236" rx="59" ry="143" transform="rotate(38 475 236)" stroke="#F7F2E7" stroke-width="3"/>
+<circle cx="475" cy="236" r="19" fill="#FA5B35"/>
+<circle cx="550" cy="134" r="9" fill="#F7F2E7"/>
+<text x="34" y="333" fill="#D0CEC8" font-family="monospace" font-size="13" letter-spacing="2">MOTION &amp; ENERGY</text>
+</svg>

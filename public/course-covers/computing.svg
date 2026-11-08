@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+<title>计算机：代码与逻辑</title>
+<rect width="640" height="360" fill="#F0F0EA"/>
+<text x="32" y="44" fill="#171717" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">COMPUTING</text>
+<path d="M32 65H608" stroke="#171717" stroke-opacity=".25"/>
+<text x="20" y="265" fill="#191919" font-family="monospace" font-size="190" font-weight="700">{ }</text>
+<g fill="#FA5B35"><rect x="362" y="104" width="49" height="49"/><rect x="464" y="104" width="49" height="49"/><rect x="413" y="155" width="49" height="49"/><rect x="515" y="155" width="49" height="49"/><rect x="362" y="206" width="49" height="49"/><rect x="464" y="206" width="49" height="49"/><rect x="413" y="257" width="49" height="49"/></g>
+<g fill="#191919"><rect x="413" y="104" width="49" height="49"/><rect x="464" y="155" width="49" height="49"/><rect x="413" y="206" width="49" height="49"/><rect x="515" y="257" width="49" height="49"/></g>
+<path d="M57 290h172" stroke="#FA5B35" stroke-width="7"/>
+<text x="34" y="333" fill="#171717" font-family="monospace" font-size="13" letter-spacing="2">THINK. BUILD. REPEAT.</text>
+</svg>

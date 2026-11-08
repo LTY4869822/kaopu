@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+<title>语言：字母与表达</title>
+<rect width="640" height="360" fill="#ECE8DD"/>
+<text x="32" y="44" fill="#171717" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">LANGUAGE</text>
+<path d="M32 65H608" stroke="#171717" stroke-opacity=".25"/>
+<path d="M32 276H608M32 130H608" stroke="#171717" stroke-opacity=".12"/>
+<text x="32" y="279" fill="#191919" font-family="Georgia,serif" font-size="245">A</text>
+<text x="209" y="279" fill="#FA5B35" font-family="Georgia,serif" font-size="249" font-style="italic">a</text>
+<path d="M440 140h39v37c0 40-17 65-45 72l-7-17c22-8 29-24 29-40h-16Zm65 0h39v37c0 40-17 65-45 72l-7-17c22-8 29-24 29-40h-16Z" fill="#191919"/>
+<rect x="32" y="295" width="280" height="5" fill="#FA5B35"/>
+<text x="34" y="333" fill="#171717" font-family="monospace" font-size="13" letter-spacing="2">WORDS OPEN WORLDS</text>
+</svg>

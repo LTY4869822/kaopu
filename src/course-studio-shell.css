@@ -1,0 +1,54 @@
+.main.course-studio-page {
+  width: 100%;
+  max-width: none;
+  padding: 18px 24px 24px;
+}
+.studio-course-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 42px;
+  margin-bottom: 18px;
+}
+.studio-course-heading > .text-button { font-size: 13px; white-space: nowrap; }
+.studio-heading-divider { height: 17px; width: 1px; background: #dbded5; }
+.studio-course-heading h1 { font-size: clamp(19px, 1.5vw, 24px); line-height: 1.35; font-weight: 600; letter-spacing: -.035em; min-width: 0; }
+.studio-heading-count { color: #7a8075; font-size: 12px; white-space: nowrap; }
+.studio-heading-actions { display: flex; align-items: center; gap: 17px; margin-left: auto; }
+.studio-heading-actions .text-button { font-size: 12px; white-space: nowrap; }
+.studio-exam-overlay { z-index: 100; }
+.studio-exam-dialog {
+  position: fixed;
+  z-index: 101;
+  inset: 24px max(24px, calc((100vw - 1360px) / 2));
+  border: 1px solid #e1e4dc;
+  border-radius: 22px;
+  background: #f8f9f5;
+  box-shadow: 0 30px 100px #1a251c30;
+  padding: 24px;
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.studio-exam-dialog-heading { display:flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 0 0 20px; border-bottom: 1px solid #e1e4dc; margin-bottom: 24px; }
+.studio-exam-dialog-heading h2 { font-size: 21px; font-weight: 600; letter-spacing: -.025em; }
+.studio-exam-dialog-heading p { color: #757d71; font-size: 13px; margin-top: 6px; }
+.studio-exam-dialog-heading .icon-button { flex: 0 0 38px; }
+.studio-dialog-loading { padding: 50px; text-align: center; color: #737b6e; }
+@media (max-width: 1100px) {
+  .main.course-studio-page { padding: 16px; }
+  .studio-heading-actions { gap: 10px; }
+  .studio-heading-actions > .text-button { font-size: 0; gap: 0; min-width: 30px; min-height: 36px; justify-content: center; }
+  .studio-heading-actions > .text-button svg { width: 18px; height: 18px; }
+}
+@media (max-width: 700px) {
+  .main.course-studio-page { padding: 14px 12px 90px; }
+  .studio-course-heading { gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  .studio-course-heading h1 { font-size: 20px; flex: 1; }
+  .studio-heading-count { display: none; }
+  .studio-heading-actions { gap: 4px; }
+  .studio-course-heading > .text-button { font-size: 0; gap: 0; min-height: 36px; min-width: 26px; }
+  .studio-course-heading > .text-button svg { width: 18px; height: 18px; }
+  .studio-heading-divider { display: none; }
+  .studio-exam-dialog { inset: 8px; padding: 16px; border-radius: 16px; }
+  .studio-exam-dialog-heading h2 { font-size: 18px; }
+}

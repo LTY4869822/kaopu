@@ -1,0 +1,6 @@
+{
+  "source": "Built-in ImageGen",
+  "createdAt": "2026-11-04",
+  "prompt": "Use case: precise-object-edit. Supporting texture asset: a matching geometric DEPTH MAP for the provided full-length campus Confucius statue, not a beauty photograph. Preserve the exact 1024x1536 framing, exact outer silhouette, hands position, face, cap, long sleeves, robe hem, shoes and low base pixel-aligned with the supplied statue. Replace all statue colors, grain and original lighting with a smooth grayscale camera-distance estimate: closest hands and nose/face pale gray to near white, torso medium-light gray, outer sleeves and shoulders mid gray, receding robe sides and lower body darker gray. Model broad rounded sculptural volumes and smooth distance transitions; no original stone grain, no material texture, no photographic shadows, no artificial glows. The robe folds should be gently represented as geometry, not striped luminance. Preserve transparent exterior alpha; exterior/background RGB must be black, no visible scene, no text. Exact same aspect ratio and subject scale, nothing moves or changes shape. This is an artistic depth approximation for subtle WebGL UV parallax, not a visible sculpture image.",
+  "reference": "campus-confucius.png"
+}

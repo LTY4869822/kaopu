@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none">
+<title>电路：信号与连接</title>
+<rect width="640" height="360" fill="#222321"/>
+<text x="32" y="44" fill="#F7F2E7" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">CIRCUITS</text>
+<path d="M32 65H608" stroke="#F7F2E7" stroke-opacity=".25"/>
+<g stroke="#F7F2E7" stroke-opacity=".55" stroke-width="2"><path d="M242 136H142V100H71M242 166H110M242 196H169v60H80M242 226H142v66M398 136h81v-30h98M398 166h153M398 196h60v60h130M398 226h101v66"/><path d="M280 108V81M310 108V81M340 108V81M370 108V81M280 264v42M310 264v42M340 264v42M370 264v42"/></g>
+<g fill="#FA5B35"><circle cx="71" cy="100" r="6"/><circle cx="110" cy="166" r="6"/><circle cx="80" cy="256" r="6"/><circle cx="142" cy="292" r="6"/><circle cx="577" cy="106" r="6"/><circle cx="551" cy="166" r="6"/><circle cx="588" cy="256" r="6"/><circle cx="499" cy="292" r="6"/></g>
+<rect x="242" y="108" width="156" height="156" rx="8" fill="#FA5B35"/>
+<rect x="259" y="125" width="122" height="122" rx="2" stroke="#222321" stroke-width="2"/>
+<path d="M285 211h16v-51h23v51h23v-51h10" stroke="#222321" stroke-width="7"/>
+<text x="34" y="333" fill="#D0CEC8" font-family="monospace" font-size="13" letter-spacing="2">SIGNALS &amp; CONNECTIONS</text>
+</svg>
