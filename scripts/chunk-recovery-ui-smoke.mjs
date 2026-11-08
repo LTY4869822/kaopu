@@ -15,6 +15,10 @@ try {
   for (const persistent of [false,true]) {
     const context = await browser.newContext({viewport:{width:1360,height:950},reducedMotion:'reduce'});
     let failed = 0;
+    let documentLoads = 0;
+    context.on('request', request => {
+      if (request.isNavigationRequest() && request.resourceType() === 'document') documentLoads++;
+    });
     await context.route('**/assets/AppSettings-*.js', route => ++failed === 1 || persistent ? route.fulfill({status:404,body:'Old chunk removed'}) : route.continue());
     const page = await context.newPage();
     await page.goto(`${base}/?page=materials`); await page.getByRole('heading',{name:'我的课程',exact:true}).waitFor();
@@ -24,8 +28,8 @@ try {
       assert.equal(failed,2); assert.equal(new URL(page.url()).searchParams.get('page'),'settings');
     } else {
       await page.getByRole('heading',{name:'页面暂时未打开',exact:true}).waitFor({timeout:15000});
-      // StrictMode makes two import attempts per load: initial attempt plus one reload.
-      assert.equal(failed,4); await page.getByRole('link',{name:'返回我的课程',exact:true}).click();
+      // Count document navigations: browsers may coalesce repeated module requests.
+      assert.equal(documentLoads, 2); assert.ok(failed >= 2); await page.getByRole('link',{name:'返回我的课程',exact:true}).click();
       await page.getByRole('heading',{name:'我的课程',exact:true}).waitFor();
     }
     await page.screenshot({path:path.join(out,persistent?'persistent-recovery.png':'automatic-recovery.png'),fullPage:true});

@@ -1,5 +1,5 @@
 {
-  "name": "shifen-study",
+  "name": "kaopu",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -7,6 +7,7 @@
     "dev": "concurrently -k \"npm:dev:server\" \"npm:dev:web\"",
     "dev:server": "node --watch server/index.mjs",
     "dev:web": "vite --host 0.0.0.0",
+    "build:pages": "vite build demo --base ./ --outDir ../dist-pages --emptyOutDir",
     "build": "tsc -b && vite build",
     "start": "node server/index.mjs",
     "recover": "node scripts/recover-account.mjs",

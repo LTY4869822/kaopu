@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    image: shifen-study:local
+    image: kaopu:local
     restart: unless-stopped
     init: true
     environment:

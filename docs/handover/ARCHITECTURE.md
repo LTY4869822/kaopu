@@ -2,7 +2,7 @@
 
 ## 运行结构
 
-浏览器运行 React/TypeScript；Express 提供同源 `/api` 和生产 `dist`。开发时 Vite 代理 API。没有独立数据库，主学习状态与原件存于本机数据目录。正式启动启用单账户认证；测试工厂 `createApp()` 可在隔离目录内不启用认证，不能直接作为公网生产入口。
+浏览器运行 React/TypeScript；Express 提供同源 `/api` 和生产 `dist`。开发时 Vite 代理 API。没有独立数据库，主学习状态与原件存于本机数据目录。正式启动启用多账户认证，通过 `server/workspaces.mjs` 按账户分配独立数据目录；测试工厂 `createApp()` 可在隔离目录内不启用认证，不能直接作为公网生产入口。
 
 ```mermaid
 flowchart LR

@@ -1,0 +1,9 @@
+{
+  "name": "考谱",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "node",
+  "containerEnv": { "TRUST_PROXY": "1", "AUTH_COOKIE_SECURE": "true" },
+  "postCreateCommand": "npm ci && npm run setup:pdf && npm run build",
+  "forwardPorts": [3001],
+  "portsAttributes": { "3001": { "label": "考谱", "onAutoForward": "notify" } }
+}

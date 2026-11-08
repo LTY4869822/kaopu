@@ -40,7 +40,7 @@ export async function downloadFullBackup() {
     throw new Error(data.error || "完整备份未能下载，请重试。");
   }
   const disposition = response.headers.get("Content-Disposition") || "";
-  const filename = disposition.match(/filename="([^"]+\.zip)"/i)?.[1] || "shifen-full-backup.zip";
+  const filename = disposition.match(/filename="([^"]+\.zip)"/i)?.[1] || "kaopu-full-backup.zip";
   const url = URL.createObjectURL(await response.blob());
   const anchor = document.createElement("a");
   anchor.href = url; anchor.download = filename; document.body.appendChild(anchor); anchor.click(); anchor.remove();

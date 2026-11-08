@@ -52,7 +52,7 @@ export default function AppSettings({ settings, accountName, onRefresh, onNotify
     <div className="st-panel" role="tabpanel" id="settings-panel-account" aria-labelledby="settings-tab-account" hidden={tab !== "account"}>
       <div className="st-section-heading"><h2>账户与学习数据</h2><p>管理当前账户，保管好你的课程资料与学习记录。</p></div>
       <div className="st-account-row"><UserCircle size={32} /><div><strong>{accountName || settings.name || "同学"}</strong><span>{onLogout ? "当前已登录" : "本机学习空间"}</span></div>{onLogout && <button type="button" className="secondary" onClick={() => { void onLogout().catch(e => onNotify(e.message || "退出未完成，请重试。")); }}><SignOut size={17} />退出登录</button>}</div>
-      <div className="st-data-row"><div><h3><Database size={19} />数据备份</h3><p>导出课程、笔记与复习记录，保存一份本机备份。</p></div><a href="/api/export" download="shifen-backup.json" className="secondary"><DownloadSimple size={17} />导出学习数据</a></div>
+      <div className="st-data-row"><div><h3><Database size={19} />数据备份</h3><p>导出课程、笔记与复习记录，保存一份本机备份。</p></div><a href="/api/export" download="kaopu-backup.json" className="secondary"><DownloadSimple size={17} />导出学习数据</a></div>
       <p className="st-hint">资料和进度保存在当前电脑，手机页面适配不代表已开启云端同步。</p>
       <details className="st-advanced"><summary>清空学习空间</summary><p>将移除当前课程、资料与学习记录。请先导出备份，下一步仍需确认。</p><button type="button" className="st-danger" onClick={onReset}>打开清空确认</button></details>
     </div>

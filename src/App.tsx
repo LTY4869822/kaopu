@@ -1303,7 +1303,7 @@ export default function App({ onLogout, accountName }: { onLogout?: () => Promis
           <a
             className="secondary"
             href="/api/export"
-            download="shifen-backup.json"
+            download="kaopu-backup.json"
           >
             <DownloadSimple size={17} />
             先导出当前数据

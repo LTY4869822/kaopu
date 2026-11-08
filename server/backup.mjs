@@ -117,7 +117,7 @@ export async function createBackupArchive({ dataDir }) {
   for (const file of first) zip.file(`payload/${file.path}`, file.data);
   const bytes = await zip.generateAsync({ type: 'nodebuffer', compression: 'DEFLATE', compressionOptions: { level: 6 } });
   if (bytes.length > MAX_ARCHIVE_BYTES) throw fail(413, '备份包超过当前格式上限，请先清理不需要的资料。');
-  return { bytes, filename: `shifen-full-backup-${new Date().toISOString().replace(/[:.]/g, '-')}.zip`, fileCount: first.length };
+  return { bytes, filename: `kaopu-full-backup-${new Date().toISOString().replace(/[:.]/g, '-')}.zip`, fileCount: first.length };
 }
 
 function readCentralDirectory(buffer) {

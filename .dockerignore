@@ -3,6 +3,7 @@
 .env
 .env.*
 !.env.example
+dist-pages
 node_modules
 dist
 data

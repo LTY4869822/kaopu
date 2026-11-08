@@ -279,7 +279,7 @@ export function createStudyDocumentExporter() {
 export function sendStudyDocument(res, bytes, title, format, inline = false) {
   const filename = `${title.replace(/[\\/<>:"|?*\u0000-\u001f]/g, '').slice(0, 100) || '考谱学习讲义'}.${format}`;
   res.set({ 'Content-Type': format === 'pdf' ? 'application/pdf' : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    'Content-Disposition': `${inline && format === 'pdf' ? 'inline' : 'attachment'}; filename="Shifen-Notes.${format}"; filename*=UTF-8''${encodeURIComponent(filename)}`,
+    'Content-Disposition': `${inline && format === 'pdf' ? 'inline' : 'attachment'}; filename="Kaopu-Notes.${format}"; filename*=UTF-8''${encodeURIComponent(filename)}`,
     'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' });
   res.send(bytes);
 }

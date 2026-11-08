@@ -121,7 +121,7 @@ export function mountLessonExport(app, { dataDir, lessonById, readableLesson = v
     const result = await renderLessonDocument(lesson, { dataDir });
     const filename = `${lesson.title.replace(/[\\/<>:"|?*\u0000-\u001f]/g, '').slice(0, 80) || '考谱'} · 图文讲义.html`;
     res.setHeader('Cache-Control', 'no-store');
-    res.setHeader('Content-Disposition', `attachment; filename="Shifen-Lecture.html"; filename*=UTF-8''${encodeURIComponent(filename)}`);
+    res.setHeader('Content-Disposition', `attachment; filename="Kaopu-Lecture.html"; filename*=UTF-8''${encodeURIComponent(filename)}`);
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.type('html').send(result.html);
   });

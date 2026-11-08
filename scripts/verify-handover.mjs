@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';import {fileURLToPath} from 'node:url';import assert from 'node:assert/strict';import JSZip from 'jszip';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const date=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Shanghai'}).format(new Date());
-const archive=path.resolve(process.argv.find(v=>v.endsWith('.zip'))||path.join(root,'output',`shifen-handover-${date}.zip`));
+const archive=path.resolve(process.argv.find(v=>v.endsWith('.zip'))||path.join(root,'output',`kaopu-handover-${date}.zip`));
 const bytes=await fs.readFile(archive),sha=createHash('sha256').update(bytes).digest('hex');
 assert.equal((await fs.readFile(`${archive}.sha256`,'utf8')).split(/\s+/)[0],sha,'Archive SHA-256 mismatch');
 const zip=await JSZip.loadAsync(bytes), manifestName=Object.keys(zip.files).find(p=>p.endsWith('/BUILD_MANIFEST.json'));assert.ok(manifestName);

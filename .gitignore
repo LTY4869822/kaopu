@@ -1,8 +1,11 @@
 node_modules/
 dist/
+dist-pages/
 data/
 backups/
 .env
+.env.*
+!.env.example
 *.log
 test-results/
 playwright-report/

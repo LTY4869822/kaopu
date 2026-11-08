@@ -6,7 +6,7 @@ import JSZip from 'jszip';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const date=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Shanghai'}).format(new Date());
-const prefix=`shifen-handover-${date}`, zip=new JSZip(), manifest=[], names=new Set();
+const prefix=`kaopu-handover-${date}`, zip=new JSZip(), manifest=[], names=new Set();
 const hash=data=>createHash('sha256').update(data).digest('hex');
 const deny=new Set(['.git','.local','.venv-docling','node_modules','data','output','test-results','__pycache__','.impeccable']);
 const privateNames=new Set(['auth.json','state.json','model-service.json']);
@@ -30,7 +30,7 @@ async function include(relative) {
   if(stat.isDirectory()){for(const name of(await fs.readdir(absolute)).sort())await include(`${relative}/${name}`);return;}
   if(stat.isFile())add(relative,await fs.readFile(absolute));
 }
-for (const directory of ['src','server','public','tests','scripts','dist','vendor'])await include(directory);
+for (const directory of ['src','server','public','tests','scripts','dist','vendor','demo'])await include(directory);
 for(const name of ['package.json','package-lock.json','requirements-local.txt','requirements-docling.txt','tsconfig.json','vite.config.ts','index.html','.env.example','.gitignore','README.md','HANDOVER.md','PRODUCT.md','DESIGN.md','THIRD_PARTY_NOTICES.md'])await include(name);
 for(const name of(await fs.readdir(path.join(root,'docs'))).sort())if(name.endsWith('.md'))await include(`docs/${name}`);
 await include('docs/handover');

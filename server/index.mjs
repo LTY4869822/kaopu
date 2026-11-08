@@ -239,7 +239,7 @@ function buildApp({ dataDir = process.env.DATA_DIR || path.join(rootDir, 'data')
     res.sendFile(filename);
   });
   app.get('/api/export', (_req, res) => {
-    res.setHeader('Content-Disposition', 'attachment; filename="shifen-backup.json"');
+    res.setHeader('Content-Disposition', 'attachment; filename="kaopu-backup.json"');
     res.json({ ...state, exportedAt: new Date().toISOString(), schemaVersion: 1 });
   });
   app.post('/api/courses', (req, res) => {
@@ -385,7 +385,7 @@ function buildApp({ dataDir = process.env.DATA_DIR || path.join(rootDir, 'data')
     if (!document) throw httpError(404, '资料已被删除，请刷新列表。');
     const archives = (state.sourceRevisionArchives || []).filter(item => item.documentId === document.id);
     if (!archives.length) throw httpError(404, '这份资料暂无旧版练习记录。');
-    res.setHeader('Content-Disposition', 'attachment; filename="shifen-note-revision-history.json"');
+    res.setHeader('Content-Disposition', 'attachment; filename="kaopu-note-revision-history.json"');
     res.json({ documentId: document.id, documentName: document.name, readOnly: true, warning: '来源已修订，旧题目和作答仅供查看，不恢复为当前练习；历史掌握估计未重新计算。', archives });
   });
   app.put('/api/documents/:id/recognition', (req, res) => {
