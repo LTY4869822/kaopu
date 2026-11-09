@@ -2,7 +2,7 @@
 
 考谱帮你用自己的课件复习。把一章课件和课堂笔记归到同一门课，可以整理出带出处的讲义，围绕考点练习，再按考试日期把薄弱章节排进复习计划。
 
-[在线体验交互演示](https://lty4869822.github.io/kaopu/) · [在 GitHub Codespaces 运行完整版](https://codespaces.new/LTY4869822/kaopu) · [开发交接说明](HANDOVER.md)
+[直接体验考谱工作台](https://lty4869822.github.io/kaopu/?demo=1) · [产品首页](https://lty4869822.github.io/kaopu/) · [开发交接说明](HANDOVER.md)
 
 ## 选择使用方式
 
@@ -69,7 +69,7 @@ Compose 通过 `compose.yaml` 的 `environment` 显式传递容器变量。使�
 
 **公开演示。** `main` 更新后，GitHub Actions 安装锁定依赖，运行 `npm run build:pages`，将 `dist-pages/` 发布到 Pages。访客可以操作内置示例。保存学习资料、账户登录和模型调用由完整版的 Express 服务提供。[发布工作流](.github/workflows/pages.yml) · [GitHub Pages 文档](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
 
-**个人完整版。** 登录 GitHub，通过页首的 Codespaces 链接创建工作区，等待容器安装依赖、下载 Chromium 并构建前端。在终端运行 `npm start`，然后在 **Ports** 面板打开 **3001** 的转发地址，创建自己的考谱账户。工作区停止后可重新启动，再执行 `npm start`。计算与存储使用当前 GitHub 账户的 Codespaces 配额。[容器配置](.devcontainer/devcontainer.json) · [端口转发文档](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace)
+**个人完整版。** 登录 GitHub，通过 [Codespaces 开发环境入口](https://codespaces.new/LTY4869822/kaopu) 创建工作区，等待容器安装依赖、下载 Chromium 并构建前端。在终端运行 `npm start`，然后在 **Ports** 面板打开 **3001** 的转发地址，创建自己的考谱账户。工作区停止后可重新启动，再执行 `npm start`。计算与存储使用当前 GitHub 账户的 Codespaces 配额。[容器配置](.devcontainer/devcontainer.json) · [端口转发文档](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace)
 
 ## 在自己的服务器上部署
 

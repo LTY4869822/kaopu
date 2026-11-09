@@ -1,0 +1,40 @@
+.public-workspace {
+  min-height: 100vh;
+  padding: clamp(20px, 5vw, 64px) 16px;
+}
+
+.public-workspace-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.public-workspace-inner > a {
+  color: #36486a;
+  text-decoration: underline;
+}
+
+.public-workspace-inner h1 {
+  margin: 1em 0 0;
+  font-size: clamp(26px, 4vw, 40px);
+}
+
+.public-workspace-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 14px;
+}
+
+.public-workspace-steps button {
+  padding: 8px 16px;
+  border: 1px solid #cbd3e0;
+  border-radius: 20px;
+  background: white;
+  color: #24324a;
+}
+
+.public-workspace-steps button[aria-pressed="true"] {
+  border-color: #24324a;
+  background: #24324a;
+  color: white;
+}
